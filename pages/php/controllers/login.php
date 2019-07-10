@@ -6,12 +6,13 @@
 
     $data = login($login, $pass);
     if($data == 0){
-        echo"Email ou senha errado!";
+        echo "Email ou senha errado!";
     }
     else{
         $_SESSION["id"] = $data["id"];
         $_SESSION["name"] = $data["name"];
         $_SESSION["email"] = $data["email"];
         $_SESSION["pass"] = $data["pass"];
+        header("location: ../../album.html");
     }
 ?>
