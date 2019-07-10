@@ -1,0 +1,264 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+* {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.side-menu {
+  width: 30vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-image: linear-gradient(-45deg, #426cf5, #6128B0);
+  background-position: center;
+}
+
+@media (max-width: 1300px) {
+  .side-menu {
+    width: 40vw;
+  }
+  .side-menu .profile-welcome {
+    font-size: 14pt !important;
+  }
+  .side-menu .profile-img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .side-menu .options-title {
+    color: #fff;
+    position: relative;
+  }
+  .side-menu .options-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    margin: 0 0 0 10px;
+    height: 2px;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 65% !important;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+}
+
+.side-menu .album-logo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  color: #fff;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  margin: 0 0 2em 0;
+}
+
+.side-menu .profile-data {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.side-menu .profile-data .profile-img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #fff;
+}
+
+.side-menu .profile-data .profile-welcome {
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 16pt;
+}
+
+.side-menu .options-menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.side-menu .options-menu .options-title {
+  color: #fff;
+  position: relative;
+}
+
+.side-menu .options-menu .options-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin: 0 0 0 10px;
+  height: 2px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 65%;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.side-menu .options-menu .options-btn {
+  width: 90%;
+  border-radius: 2px;
+  border-left: 3px solid #ff6600;
+  background-color: #ffffff30;
+  padding: 1em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  font-weight: 500;
+  margin: 1em 0 0 0;
+}
+
+.side-menu .options-menu .options-btn:hover {
+  background-color: #fff;
+}
+
+.side-menu .options-menu .options-btn:hover .options-btn-label {
+  color: #426cf5;
+}
+
+.side-menu .options-menu .options-btn .options-btn-icon {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  margin: 0 1ch 0 0;
+}
+
+.side-menu .options-menu .options-btn .options-btn-label {
+  color: #fff;
+}
+
+.side-menu .options-menu .options-btn-disabled {
+  width: 90%;
+  border-radius: 2px;
+  border-left: 3px solid #919191;
+  background-color: #ffffff30;
+  padding: 1em;
+  cursor: default;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  font-weight: 500;
+  margin: 1em 0 0 0;
+}
+
+.side-menu .options-menu .options-btn-disabled .options-btn-icon {
+  width: 16px;
+  height: 16px;
+  background-color: #919191;
+  margin: 0 1ch 0 0;
+}
+
+.side-menu .options-menu .options-btn-disabled .options-btn-label {
+  color: #919191;
+}
+
+.side-menu .log-out a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.side-menu .log-out a:hover {
+  text-decoration: underline;
+}
+
+.page-content {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  padding: 5em;
+}
+
+.page-content .album {
+  width: 100%;
+}
+
+.page-content .album .album-title {
+  color: #426cf5;
+  margin: 0 0 1em 0;
+}
+
+.page-content .album .stickers-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+@media (max-width: 1300px) {
+  .page-content .album .stickers-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.page-content .album .stickers-wrapper .sticker {
+  margin: 0 1em 1em 0;
+  width: 150px;
+  height: 180px;
+  border: 2px solid #426cf5;
+}
+
+@media (max-width: 1300px) {
+  .page-content .album .stickers-wrapper .sticker {
+    margin: 0 1em 1em 0;
+    width: 120px !important;
+    height: 150px !important;
+    border: 2px solid #426cf5;
+  }
+}
+/*# sourceMappingURL=album.css.map */
