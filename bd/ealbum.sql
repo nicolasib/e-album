@@ -1,3 +1,4 @@
+drop database ealbum;
 create database if not exists ealbum;
 use ealbum;
 
