@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+
+$blu: #426cf5;
+$pur: #6128B0;
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box !important;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 0;
+}
+
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu-bg{
+    .menu-home{
+        color: #000 !important;
+        transition-duration: 300ms;
+    }
+    .menu-login{
+        transition-duration: 300ms;
+        a{
+
+            color: #000 !important;
+        }
+    }
+    .menu-register{
+        transition-duration: 300ms;
+        a{
+
+            color: #000 !important;
+        }
+    }
+}
+
+.menu-bar{
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    align-items: center;
+    padding: 0 2ch;
+    justify-content: space-between;
+    height: 4em;
+    transition-duration: 400ms;
+    .menu-account{
+        padding: 0 2ch 0 0;
+        .menu-login{
+            margin: 0 1ch 0 0;
+            transition-duration: 300ms;
+            a{
+                text-decoration: none;
+                color: #fff;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .menu-register{
+            font-weight: bold;
+            transition-duration: 300ms;
+            a{
+                text-decoration: none;
+                color: #fff;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .menu-home{
+        font-weight: bold;
+        font-size: 2ch;
+        color: #fff;
+        transition-duration: 300ms;
+    }
+}
+
+
+ /* HEADER */ 
+
+.degrade{
+    background-image: linear-gradient(-45deg, #426cf570, #6128B070);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+ .header{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url('../resources/imgs/index/header.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .header-title{
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        font-size: 4ch;
+        color: #fff;
+    }
+    .header-subtitle{
+        animation-duration: 2s;
+        animation-delay: 0.8s;
+        font-size: 2ch;
+        color: #fff;
+    }
+    .header-cta{
+        animation-duration: 1.5s;
+        animation-delay: 1.2s;
+        background-color: #00000000;
+        transition-duration: 300ms;
+        border-radius: 2px;
+        border: 2px solid #fff;
+        cursor: pointer;
+        margin: 2ch 0 0 0;
+        font-size: 1.5ch;
+        font-weight: 500;
+        padding: 1ch;
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+    .header-cta:hover{
+        background-color: #fff;
+        transition-duration: 300ms;
+        a{
+            color: #000;
+        }
+    }
+}
+
+ /* BOUT */
+
+.bout{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding: 2ch 0;
+    align-items: center;
+    justify-content: space-around;
+    .bout-paragraph{
+        font-family: 'Lato', sans-serif;
+        width: 70vw;
+    }
+    .cards-row{
+        display: flex;
+        background-image: linear-gradient(-45deg, $blu, $pur);
+        padding: 2ch 0;
+        width: 100vw;
+        justify-content: center;
+        .fade-first{
+            animation-duration: 800ms;
+            animation-delay: 500ms;
+        }
+        .fade-second{
+            animation-duration: 800ms;
+            animation-delay: 1s;
+        }
+        .fade-last{
+            animation-duration: 800ms;
+            animation-delay: 1.5s;
+        }
+        .bout-cards{
+            background-color: #fff;
+            width: 20em;
+            margin: 0 2ch 0 0;
+            border-radius: 2px;
+            overflow: hidden;
+            box-shadow: 2px 2px 6px #00000020;
+            transition-duration: 300ms;
+            &:hover{
+                box-shadow: 3px 3px 6px #00000030;
+                transition-duration: 300ms;
+            }
+            .bout-card-avatar{
+                width: 100%;
+                height: 14em;
+            }
+            .bout-card-content{
+                padding: 2ch;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                p{
+                    font-family: 'Lato', sans-serif;
+                }
+            }
+            .joaozin{
+                background: url('../resources/imgs/index/team/jao.PNG');
+                background-size: cover;
+            }
+            .yuri{
+                background: url('../resources/imgs/index/team/yuri.png');
+                background-size: cover;
+            }
+            .niculinha{
+                background: url('../resources/imgs/index/team/eu.png');
+                background-size: cover;
+            }
+
+        }
+    }
+
+    .bout-title{
+        font-size: 4ch;
+        color: $blu;
+    }
+    .bout-subtitle{
+        font-size: 3ch;
+        color: $blu;
+    }
+    .bout-paragraph{
+        font-size: 2ch;
+    }
+
+    .bout-cta{
+        animation-duration: 1s;
+        background-color: #fff;
+        border: none;
+        padding: 2ch;
+        border-radius: 2px;
+        box-shadow: 2px 2px 4px #00000030;
+        border: 2px solid $blu;
+        cursor: pointer;
+        transition-duration: 300ms;
+        text-decoration: none;
+        color: $blu;
+        font-size: 1.3ch;
+        font-weight: bolder;
+        font-family: 'Montserrat', sans-serif;
+
+        &:hover{
+            border: 2px solid $blu;
+            background-color: $blu;
+            transition-duration: 300ms;
+            color: #fff;
+        }
+        
+    }
+}
+
+.use{
+    width: 100vw;
+    height: 100vh;
+}

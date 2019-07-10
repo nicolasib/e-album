@@ -1,0 +1,361 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+* {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+.main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.menu-bg .menu-home {
+  color: #000 !important;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.menu-bg .menu-login {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.menu-bg .menu-login a {
+  color: #000 !important;
+}
+
+.menu-bg .menu-register {
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.menu-bg .menu-register a {
+  color: #000 !important;
+}
+
+.menu-bar {
+  z-index: 99;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2ch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 4em;
+  -webkit-transition-duration: 400ms;
+          transition-duration: 400ms;
+}
+
+.menu-bar .menu-account {
+  padding: 0 2ch 0 0;
+}
+
+.menu-bar .menu-account .menu-login {
+  margin: 0 1ch 0 0;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.menu-bar .menu-account .menu-login a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-bar .menu-account .menu-login a:hover {
+  text-decoration: underline;
+}
+
+.menu-bar .menu-account .menu-register {
+  font-weight: bold;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.menu-bar .menu-account .menu-register a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-bar .menu-account .menu-register a:hover {
+  text-decoration: underline;
+}
+
+.menu-bar .menu-home {
+  font-weight: bold;
+  font-size: 2ch;
+  color: #fff;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+/* HEADER */
+.degrade {
+  background-image: linear-gradient(-45deg, #426cf570, #6128B070);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.header {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("../resources/imgs/index/header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.header .header-title {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  font-size: 4ch;
+  color: #fff;
+}
+
+.header .header-subtitle {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  font-size: 2ch;
+  color: #fff;
+}
+
+.header .header-cta {
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  background-color: #00000000;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  margin: 2ch 0 0 0;
+  font-size: 1.5ch;
+  font-weight: 500;
+  padding: 1ch;
+}
+
+.header .header-cta a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header .header-cta:hover {
+  background-color: #fff;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.header .header-cta:hover a {
+  color: #000;
+}
+
+/* BOUT */
+.bout {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2ch 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.bout .bout-paragraph {
+  font-family: 'Lato', sans-serif;
+  width: 70vw;
+}
+
+.bout .cards-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: linear-gradient(-45deg, #426cf5, #6128B0);
+  padding: 2ch 0;
+  width: 100vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bout .cards-row .fade-first {
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.bout .cards-row .fade-second {
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.bout .cards-row .fade-last {
+  -webkit-animation-duration: 800ms;
+          animation-duration: 800ms;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.bout .cards-row .bout-cards {
+  background-color: #fff;
+  width: 20em;
+  margin: 0 2ch 0 0;
+  border-radius: 2px;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 2px 6px #00000020;
+          box-shadow: 2px 2px 6px #00000020;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.bout .cards-row .bout-cards:hover {
+  -webkit-box-shadow: 3px 3px 6px #00000030;
+          box-shadow: 3px 3px 6px #00000030;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+}
+
+.bout .cards-row .bout-cards .bout-card-avatar {
+  width: 100%;
+  height: 14em;
+}
+
+.bout .cards-row .bout-cards .bout-card-content {
+  padding: 2ch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.bout .cards-row .bout-cards .bout-card-content p {
+  font-family: 'Lato', sans-serif;
+}
+
+.bout .cards-row .bout-cards .joaozin {
+  background: url("../resources/imgs/index/team/jao.PNG");
+  background-size: cover;
+}
+
+.bout .cards-row .bout-cards .yuri {
+  background: url("../resources/imgs/index/team/yuri.png");
+  background-size: cover;
+}
+
+.bout .cards-row .bout-cards .niculinha {
+  background: url("../resources/imgs/index/team/eu.png");
+  background-size: cover;
+}
+
+.bout .bout-title {
+  font-size: 4ch;
+  color: #426cf5;
+}
+
+.bout .bout-subtitle {
+  font-size: 3ch;
+  color: #426cf5;
+}
+
+.bout .bout-paragraph {
+  font-size: 2ch;
+}
+
+.bout .bout-cta {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  background-color: #fff;
+  border: none;
+  padding: 2ch;
+  border-radius: 2px;
+  -webkit-box-shadow: 2px 2px 4px #00000030;
+          box-shadow: 2px 2px 4px #00000030;
+  border: 2px solid #426cf5;
+  cursor: pointer;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  text-decoration: none;
+  color: #426cf5;
+  font-size: 1.3ch;
+  font-weight: bolder;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bout .bout-cta:hover {
+  border: 2px solid #426cf5;
+  background-color: #426cf5;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  color: #fff;
+}
+
+.use {
+  width: 100vw;
+  height: 100vh;
+}
+/*# sourceMappingURL=index.css.map */
