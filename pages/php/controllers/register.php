@@ -10,11 +10,11 @@
         echo "Não foi possível fazer o registro!";
     }
     else{
-        echo [
+        echo '
             {
                 "name": "$name",
                 "pass": "$pass"
             }
-        ]
+        ';
     }
 ?>
