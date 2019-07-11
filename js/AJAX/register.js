@@ -10,7 +10,7 @@ $(document).ready(function () {
         form_Data.append("pass", $("input[name=pass]").val());
         
         $.ajax({
-            url: './php/controllers/register.php', // Url do lado server que vai receber o arquivo
+            url: './php/controllers/cr_register.php', // Url do lado server que vai receber o arquivo
             data: form_Data,
             processData: false,
             contentType: false,

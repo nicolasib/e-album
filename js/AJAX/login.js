@@ -6,14 +6,14 @@ $(document).ready(function () {
         var pass = $('input[name=pass]').val();
         
         $.ajax({
-            url: './php/controllers/login.php', // Url do lado server que vai receber o arquivo
+            url: './php/controllers/cr_login.php', // Url do lado server que vai receber o arquivo
             data: {login: login, pass: pass},
             type: 'POST',
             success: function (info) {
                 if(info == 'Email ou senha errado!'){
                     $('.register-erro').html(info);
                 }else{
-                    window.location.assign("./album.html");
+                    window.location.assign("./album.php");
                 }
             },
             error: function (exr, sender) {

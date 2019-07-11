@@ -14,6 +14,6 @@
     else{
         $_SESSION["email"] = $email;
         $_SESSION["pass"] = $pass;
-        header("location: ../../album.html");
+        header("location: ../../album.php");
     }
 ?>
