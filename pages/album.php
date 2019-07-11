@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bem vindo X</title> <!-- X = usuario logado (Session PHP) -->
+    <title>Bem vindo <?php session_start(); $name = $_SESSION["name"]; echo $name;?>!</title> <!-- X = usuario logado (Session PHP) -->
     <link rel="shortcut icon" href="./icon/icon.png">
     <link rel="stylesheet" href="../css/album.css">
 </head>
@@ -14,9 +14,9 @@
             <h1 class="album-logo">e-Álbum</h1>
             <div class="profile-data">
                 <div style=" overflow: hidden" class="profile-img">
-                    <img style="height: 100%" src="../resources/imgs/users/<?php session_start(); echo $_SESSION['name']?>.jpeg">
+                    <img style="height: 100%" src="../resources/imgs/users/<?php echo $name;?>.jpeg">
                 </div>
-                <h2 class="profile-welcome">Bem vindo <?php echo $_SESSION["name"];?></h2><!-- Usuário = usuário logado (Session PHP) -->
+                <h2 class="profile-welcome">Bem vindo <?php echo $name;?>!</h2><!-- Usuário = usuário logado (Session PHP) -->
             </div>
             <div class="options-menu">
                 <h4 class="options-title">Opções</h4>
@@ -35,7 +35,7 @@
         <section class="page-content">
             <div class="album">
                 <h1 class="album-title">
-                    Meu Álbum <!--  Muda o nome durante a criação de um novo album 
+                    Seleção Brasileira <!--  Muda o nome durante a criação de um novo album 
                                     (no futuro vai ser de seleções, dai esse titulo
                                     vão ser o nome das seleções) -->
                 </h1>
