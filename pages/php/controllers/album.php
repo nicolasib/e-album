@@ -6,8 +6,12 @@
     $id_player = $_REQUEST['player'];
 
     if (cardExists($id_user, $id_team, $id_player)) {
-        addCard($id_user, $id_team, $id_player);
+        $return = addCard($id_user, $id_team, $id_player);
     } else {
-        insertCard($id_user, $id_team, $id_player);
+        $return = insertCard($id_user, $id_team, $id_player);
+    }
+
+    if ($return == 0) {
+        echo "A figurinha não foi salva!";
     }
 ?>
