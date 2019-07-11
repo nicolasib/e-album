@@ -11,10 +11,12 @@
     }
     else{
         echo '
-            {
-                "name": "$name",
-                "pass": "$pass"
-            }
+            [
+                {
+                    "name": "'.$name.'",
+                    "pass": "'.$pass.'"
+                }
+            ]
         ';
     }
 ?>
