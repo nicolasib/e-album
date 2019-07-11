@@ -1,7 +1,8 @@
 $(document).ready(function () {
     var formData;
     
-    $(".login-form").submit(function() {
+    $(".login-form").submit(function(e) {
+        e.preventDefault();
         formData = new FormData(this);
         
         $.ajax({
@@ -12,26 +13,12 @@ $(document).ready(function () {
             type: 'POST',
             success: function (data) {
                 $('.register-erro').html(data);            
+            },
+            error: function (exr, sender) {
+                alert('Erro ao carregar pagina');
             }
         });
     });
-
-    /*
-    $('.login-form').submit(function (e) { 
-        e.preventDefault();
-        var name = $('input[name=name]').val();
-        var email = $('input[name=email]').val();
-        var path = $('input[name=path]').val();
-        var pass = $('input[name=pass]').val();
-
-        $('.register-erro').load('./php/controllers/register.php', {
-            name: name, 
-            email: email, 
-            path: path, 
-            pass: pass
-        });
-    });
-    */
 
     function detectaUpload(){
         $('input[type=file]').each(function(index){
