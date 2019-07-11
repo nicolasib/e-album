@@ -20,7 +20,7 @@ $(document).ready(function () {
                     $('.register-erro').html(info);
                 }else{
                     var resultado = info.split(";")
-                    window.location.assign("./php/controllers/login.php?name="+resultado[0]+"&pass="+resultado[1]);
+                    window.location.assign("./php/controllers/login.php?login="+resultado[0]+"&pass="+resultado[1]);
                 }
             },
             error: function (exr, sender) {
