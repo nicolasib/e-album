@@ -12,10 +12,11 @@ $(document).ready(function () {
             contentType: false,
             type: 'POST',
             success: function (info) {
-                var data = JSON.parse(info);
+                
                 if(data == 'Não foi possível fazer o registro!'){
                     $('.register-erro').html(data);
                 }else{
+                    var data = JSON.parse(info);
                     window.location.assign("./php/controllers/login.php?login="+data.name+"&pass="+data.pass);
                 }
             },
