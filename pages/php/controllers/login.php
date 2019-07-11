@@ -13,6 +13,6 @@
         $_SESSION["name"] = $data["name_user"];
         $_SESSION["email"] = $data["email_user"];
         $_SESSION["pass"] = $data["pass_user"];
-        header("location: ../../album.html");
+        echo 1;
     }
 ?>
