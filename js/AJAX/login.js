@@ -14,8 +14,6 @@ $(document).ready(function () {
             success: function (info) {
                 if(info == 'Email ou senha errado!'){
                     $('.register-erro').html(info);
-                }else if(info == 1){
-                    window.location.assign("./album.html");
                 }
             },
             error: function (exr, sender) {

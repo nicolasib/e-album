@@ -14,6 +14,6 @@
         $_SESSION["email"] = $data["email_user"];
         $_SESSION["pass"] = $data["pass_user"];
         
-        echo 1;
+        Header('Location: ../../album.html');
     }
 ?>
