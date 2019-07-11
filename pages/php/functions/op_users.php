@@ -8,10 +8,8 @@
 
         $return = upload($path, $name);
         if($return){
-            $sql = "INSERT INTO user (name_user, email_user, pass_user) VALUES (?, ?, ?)";
-            $consult = $conn->prepare($sql);
-            $consult->bind_param("sss", $name, $email, $pass);
-            $consult->execute();
+            $sql = "INSERT INTO user (name_user, email_user, pass_user) VALUES ($name, $email, $pass)";
+            $consult = $conn->query($sql);
             if($consult->affected_rows == 0){
                 return 0;
             }

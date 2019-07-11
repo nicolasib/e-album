@@ -6,10 +6,8 @@
     function insertCard($id_user, $id_team, $id_player){
         global $conn;
 
-        $sql = "INSERT INTO card_player (id_user, id_team, id_player, amount) VALUES (?, ?, ?, ?)";
-        $consult = $conn->prepare($sql);
-        $consult->bind_param("iiii", $id_user, $id_team, $id_player, 0);
-        $consult->execute();
+        $sql = "INSERT INTO card_player (id_user, id_team, id_player, amount) VALUES ($id_user, $id_team, $id_player, 0)";
+        $consult = $conn->query($sql);
         if($consult->affected_rows == 0){
             return 0;
         }
@@ -20,10 +18,8 @@
     function addCard($id_user, $id_team, $id_player){
         global $conn;
 
-        $sql = "UPDATE card_player amount = amount + 1 WHERE id_user = ?, id_team = ?, id_player = ?";
-        $consult = $conn->prepare($sql);
-        $consult->bind_param("iii", $id_user, $id_team, $id_player);
-        $consult->execute();
+        $sql = "UPDATE card_player SET amount = amount + 1 WHERE id_user = $id_user, id_team = $id_team, id_player = $id_player";
+        $consult = $conn->query($sql);
         if($consult->affected_rows == 0){
             return 0;
         }
@@ -34,10 +30,8 @@
     function deleteCard($id_user, $id_team, $id_player){
         global $conn;
         
-        $sql = "DELETE * FROM card_player WHERE id_user = ?, id_team = ?, id_player = ?";
-        $consult = $conn->prepare($sql);
-        $consult->bind_param("iii", $id_user, $id_team, $id_player);
-        $consult->execute();
+        $sql = "DELETE * FROM card_player WHERE id_user = $id_user, id_team = $id_team, id_player = $id_player";
+        $consult = $conn->query($sql);
         if($consult->affected_rows == 0){
             return 0;
         }
@@ -47,7 +41,7 @@
     function cardExists($id_user, $id_team, $id_player) {
         global $conn;
         
-        $sql = "SELECT * FROM card_player WHERE id_user = ?, id_team = ?, id_player = ?";
+        $sql = "SELECT * FROM card_player WHERE id_user = $id_user, id_team = $id_team, id_player = $id_player";
         $consult->query($sql);
         if($consult->num_rows == 0){
             return 0;

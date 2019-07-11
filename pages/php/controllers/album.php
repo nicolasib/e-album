@@ -7,7 +7,8 @@
 
     if (cardExists($id_user, $id_team, $id_player)) {
         $return = addCard($id_user, $id_team, $id_player);
-    } else {
+    }
+    else {
         $return = insertCard($id_user, $id_team, $id_player);
     }
 
