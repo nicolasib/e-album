@@ -29,6 +29,36 @@ h1{
     background-image: linear-gradient(-45deg, $blu, $pur);
 }
 
+.register-erro{
+    color: red;
+    padding: 5px;
+    margin: 1em 0 0 0;
+}
+
+#input-image{
+    display: none;
+}
+
+.fake-input-div{
+    width: 100%;
+    padding: 1ch;
+    color: grey;
+    border: 1px solid lightgrey;
+    font-size: 1.2ch;
+    transition: ease-in-out;
+    transition-duration: 150ms;
+    &:hover{
+        background-color: $blu;
+        color: #fff;
+        border: 1px solid $blu;
+    }
+    cursor: pointer;
+}
+.fake-input-div-active{
+    border: 1px solid $blu;
+    color: $blu;
+}
+
 .login-title{
     font-size: 2ch;
     color: #fff;
@@ -40,6 +70,8 @@ h1{
     animation-delay: 300ms;
     text-align: center;
     padding: 0 2ch;
+    width: 250px;
+    max-width: 250px;
     display: flex;
     align-items: center;
     justify-content: space-around;
