@@ -10,6 +10,6 @@
         echo "Não foi possível fazer o registro!";
     }
     else{
-        header("location: login.php?login=$name&pass=$pass");
+        echo $objeto = {name: $name, pass: $pass};
     }
 ?>

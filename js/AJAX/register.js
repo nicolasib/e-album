@@ -12,7 +12,11 @@ $(document).ready(function () {
             contentType: false,
             type: 'POST',
             success: function (data) {
-                $('.register-erro').html(data);            
+                if(data == 'Não foi possível fazer o registro!'){
+                    $('.register-erro').html(data);
+                }else{
+                    window.location.assign("./php/controllers/login.php?login="+data.name+"&pass="+data.pass);
+                }
             },
             error: function (exr, sender) {
                 alert('Erro ao carregar pagina');
