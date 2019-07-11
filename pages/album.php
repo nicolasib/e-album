@@ -13,8 +13,10 @@
         <nav class="side-menu">
             <h1 class="album-logo">e-Álbum</h1>
             <div class="profile-data">
-                <div class="profile-img"></div>
-                <h2 class="profile-welcome">Bem vindo Usuário!</h2><!-- Usuário = usuário logado (Session PHP) -->
+                <div style=" overflow: hidden" class="profile-img">
+                    <img style="height: 100%" src="../resources/imgs/users/<?php session_start(); echo $_SESSION['name']?>.jpeg">
+                </div>
+                <h2 class="profile-welcome">Bem vindo <?php echo $_SESSION["name"];?></h2><!-- Usuário = usuário logado (Session PHP) -->
             </div>
             <div class="options-menu">
                 <h4 class="options-title">Opções</h4>
@@ -28,7 +30,7 @@
                                                                                 por enquanto ta desabled -->
                 </div>
             </div>
-            <span class="log-out"><a href="php/controllers/logout.php">Sair</a></span> <!-- Session destroy aqui -->
+            <span class="log-out"><a href="php/controllers/cr_logout.php">Sair</a></span> <!-- Session destroy aqui -->
         </nav>
         <section class="page-content">
             <div class="album">
