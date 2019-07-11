@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    $name = $_SESSION["name"];
+    $email = $_SESSION["email"];
+    $pass = $_SESSION["pass"];
+    ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -16,19 +22,19 @@
             </h1>
             <div class="form-holder animated fadeInUp">
                 <form class="form-update">
-                    <div class="image-holder">
+                    <div style="overflow: hidden" class="image-holder">
                         <div class="degrade"></div>
-                        <img src="https://http2.mlstatic.com/grill-chapa-manta-antiaderente-teflon-grelha-para-churrasco-D_NQ_NP_782943-MLB28329726761_102018-F.jpg" class="profile-image">
+                        <img style="height: 100%" src="../resources/imgs/users/<?php echo $name;?>.jpeg" class="profile-image">
                         <label for="user-image">Alterar imagem</label>
                         <input type="file" name="path" id="user-image">
                     </div>
                     <div class="input-texts">
                         <label>Usuário</label>
-                        <input class="input" type="text" name="name">
+                        <input class="input" type="text" name="name" value="<?php echo $name;?>">
                         <label>E-mail</label>
-                        <input class="input" type="email" name="email">
+                        <input class="input" type="email" name="email" value="<?php echo $email;?>">
                         <label>Senha</label>
-                        <input class="input" type="password" name="pass">
+                        <input class="input" type="password" name="pass" value="<?php echo $pass;?>">
                         <button class="btn-update" type="submit">Atualizar</button>
                         <a href="#">Voltar</a>
                     </div>

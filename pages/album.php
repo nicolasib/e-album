@@ -1,10 +1,11 @@
+<?php session_start(); $name = $_SESSION["name"];?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bem vindo <?php session_start(); $name = $_SESSION["name"]; echo $name;?>!</title> <!-- X = usuario logado (Session PHP) -->
+    <title>Bem vindo <?php echo $name;?>!</title> <!-- X = usuario logado (Session PHP) -->
     <link rel="shortcut icon" href="./icon/icon.png">
     <link rel="stylesheet" href="../css/album.css">
 </head>
@@ -13,7 +14,7 @@
         <nav class="side-menu">
             <h1 class="album-logo">e-Álbum</h1>
             <div class="profile-data">
-                <div style=" overflow: hidden" class="profile-img">
+                <div style="overflow: hidden" class="profile-img">
                     <img style="height: 100%" src="../resources/imgs/users/<?php echo $name;?>.jpeg">
                 </div>
                 <h2 class="profile-welcome">Bem vindo <?php echo $name;?>!</h2><!-- Usuário = usuário logado (Session PHP) -->
