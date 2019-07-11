@@ -70,4 +70,15 @@
         }
         return 1;
     }
+
+    function userExists($name) {
+        global $conn;
+        
+        $sql = "SELECT * FROM user WHERE name_user = '$name'";
+        $consult->query($sql);
+        if($consult->num_rows == 0){
+            return 0;
+        }
+        return 1;
+    }
 ?>

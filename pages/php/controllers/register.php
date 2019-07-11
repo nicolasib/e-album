@@ -5,11 +5,16 @@
     $pass = $_REQUEST["pass"];
     $path = $_FILES["path"]["tmp_name"];
 
-    $return = insert($name, $email, $pass, $path);
-    if($return == 0){
-        echo "Não foi possível fazer o registro!";
+    if(userExists($name)) {
+        echo "Registro já existente!";
     }
-    else{
-        echo "$name;$pass";
+    else {
+        $return = insert($name, $email, $pass, $path);
+        if($return == 0){
+            echo "Não foi possível fazer o registro!";
+        }
+        else{
+            echo "$name;$pass";
+        }
     }
 ?>
