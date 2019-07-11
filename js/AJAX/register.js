@@ -12,9 +12,8 @@ $(document).ready(function () {
             contentType: false,
             type: 'POST',
             success: function (info) {
-                
                 if(info == 'Não foi possível fazer o registro!'){
-                    $('.register-erro').html(data);
+                    $('.register-erro').html(info);
                 }else{
                     var data = JSON.parse(info);
                     window.location.assign("./php/controllers/login.php?login="+data.name+"&pass="+data.pass);
