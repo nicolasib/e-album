@@ -8,7 +8,7 @@
 
     $data = login($login, $pass);
     if($data == 0){
-        Header('Location: ../../login.html');
+        echo "Email ou senha errado!";
     }
     else{
         $_SESSION["id"] = $data["id_user"];
