@@ -10,7 +10,6 @@
         echo "Não foi possível fazer o registro!";
     }
     else{
-        $retornoJson = "$name;$pass";
-        echo $retornoJson;
+        echo "$name;$pass";
     }
 ?>
