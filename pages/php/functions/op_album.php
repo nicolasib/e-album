@@ -17,16 +17,41 @@
     }
 
     //0 = erro | outro = sucesso
-    function addCard($id_user, $id_team, $id_player, $add){
+    function addCard($id_user, $id_team, $id_player){
         global $conn;
 
-        $sql = "UPDATE card_player amount = amount + $add WHERE id_user = $id_user, id_team = $id_team, id_player = $id_player";
+        $sql = "UPDATE card_player amount = amount + 1 WHERE id_user = ?, id_team = ?, id_player = ?";
         $consult = $conn->prepare($sql);
-        $consult->bind_param("iiii", $id_user, $id_team, $id_player, 0);
+        $consult->bind_param("iii", $id_user, $id_team, $id_player);
         $consult->execute();
         if($consult->affected_rows == 0){
             return 0;
         }
         return $consult->affected_rows;
+    }
+
+    //0 = erro | 1 = sucesso
+    function deleteCard($id_user, $id_team, $id_player){
+        global $conn;
+        
+        $sql = "DELETE * FROM card_player WHERE id_user = ?, id_team = ?, id_player = ?";
+        $consult = $conn->prepare($sql);
+        $consult->bind_param("iii", $id_user, $id_team, $id_player);
+        $consult->execute();
+        if($consult->affected_rows == 0){
+            return 0;
+        }
+        return 1;
+    }
+
+    function cardExists($id_user, $id_team, $id_player) {
+        global $conn;
+        
+        $sql = "SELECT * FROM card_player WHERE id_user = ?, id_team = ?, id_player = ?";
+        $consult->query($sql);
+        if($consult->num_rows == 0){
+            return 0;
+        }
+        return 1;
     }
 ?>
