@@ -6,7 +6,7 @@
     $path = $_FILES["path"]["tmp_name"];
 
     if(userExists($name)) {
-        echo "Registro já existente!";
+        echo "Usuário já cadastrado!";
     }
     else {
         $return = insert($name, $email, $pass, $path);

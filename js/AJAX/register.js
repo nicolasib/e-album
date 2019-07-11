@@ -16,7 +16,7 @@ $(document).ready(function () {
             contentType: false,
             type: 'POST',
             success: function (info) {
-                if(info == 'Não foi possível fazer o registro!' || info == "Registro já existente!"){
+                if(info == 'Não foi possível fazer o registro!' || info == "Usuário já cadastrado!"){
                     $('.register-erro').html(info);
                 }else{
                     var resultado = info.split(";")

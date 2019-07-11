@@ -3,9 +3,6 @@
     session_start();
     $login = $_REQUEST["login"];
     $pass = $_REQUEST["pass"];
-
-    echo $login;
-
     $data = login($login, $pass);
     if($data == 0){
         echo "Email ou senha errado!";
