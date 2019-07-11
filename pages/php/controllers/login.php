@@ -1,7 +1,7 @@
 <?php
     include_once("../functions/op_users.php");
     session_start();
-    $login = $_REQUEST["name"];
+    $login = $_REQUEST["login"];
     $pass = $_REQUEST["pass"];
 
     $data = login($login, $pass);
