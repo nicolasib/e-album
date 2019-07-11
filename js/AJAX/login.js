@@ -1,6 +1,7 @@
 $(document).ready(function () {
     var form_Data;
     $(".login-form").submit(function(e) {
+        
         e.preventDefault();
         form_Data = new FormData();
         form_Data.append("name", $("input[name=name]").val());
