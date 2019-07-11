@@ -13,7 +13,7 @@ $(document).ready(function () {
             type: 'POST',
             success: function (info) {
                 
-                if(data == 'Não foi possível fazer o registro!'){
+                if(info == 'Não foi possível fazer o registro!'){
                     $('.register-erro').html(data);
                 }else{
                     var data = JSON.parse(info);
