@@ -10,8 +10,6 @@ $(document).ready(function () {
         $.ajax({
             url: './php/controllers/login.php', // Url do lado server que vai receber o arquivo
             data: form_Data,
-            processData: false,
-            contentType: false,
             type: 'POST',
             success: function (info) {
                 if(info == 'Email ou senha errado!'){
