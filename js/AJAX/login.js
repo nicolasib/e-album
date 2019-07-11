@@ -10,7 +10,6 @@ $(document).ready(function () {
             data: {login: login, pass: pass},
             type: 'POST',
             success: function (info) {
-                window.alert(info);
                 if(info == 'Email ou senha errado!'){
                     $('.register-erro').html(info);
                 }else{
