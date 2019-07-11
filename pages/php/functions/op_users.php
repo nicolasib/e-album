@@ -75,7 +75,7 @@
         global $conn;
         
         $sql = "SELECT * FROM user WHERE name_user = '$name'";
-        $consult->query($sql);
+        $consult = $conn->query($sql);
         if($consult->num_rows == 0){
             return 0;
         }
