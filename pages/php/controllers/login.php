@@ -9,10 +9,10 @@
         echo "Email ou senha errado!";
     }
     else{
-        $_SESSION["id"] = $data["id"];
-        $_SESSION["name"] = $data["name"];
-        $_SESSION["email"] = $data["email"];
-        $_SESSION["pass"] = $data["pass"];
+        $_SESSION["id"] = $data["id_user"];
+        $_SESSION["name"] = $data["name_user"];
+        $_SESSION["email"] = $data["email_user"];
+        $_SESSION["pass"] = $data["pass_user"];
         header("location: ../../album.html");
     }
 ?>
