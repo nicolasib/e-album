@@ -17,7 +17,7 @@
                 "pass": "'.$pass.'"
             }
         ]
-    '
+    ';
         echo json_encode($retornoJson);
     }
 ?>
