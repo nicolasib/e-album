@@ -52,3 +52,19 @@ create table if not exists card_player(
 	constraint fk_playerCP foreign key(id_player)
         references player(id_player)
 );
+
+INSERT INTO team(id_team, name_team) VALUES
+	(1,"Seleção Brasileira de Futebol");
+    
+INSERT INTO player(id_team, id_player, name_player) VALUES
+	(1, 1,"Alisson Ramses Becker"),
+    (1, 2,"Thiago Emiliano da Silva"),
+    (1, 3,"João Miranda de Souza Filho"),
+    (1, 4,"Fagner Conserva Lemos"),
+    (1, 5,"Marcelo Vieira da Silva Júnior"),
+    (1, 6,"Fernando Luiz Roza"),
+    (1, 7,"José Paulo Bezerra Maciel Júnior"),
+    (1, 8,"Philippe Coutinho Correia"),
+    (1, 9,"Gabriel Fernando de Jesus"),
+    (1, 10,"Willian Borges da Silva"),
+    (1, 11,"Neymar da Silva Santos Júnior");
