@@ -10,14 +10,7 @@
         echo "Não foi possível fazer o registro!";
     }
     else{
-        $retornoJson = '
-        [
-            {
-                "name": "'.$name.'",
-                "pass": "'.$pass.'"
-            }
-        ]
-    ';
-        echo json_encode($retornoJson);
+        $retornoJson = "$name;$pass";
+        echo $retornoJson;
     }
 ?>

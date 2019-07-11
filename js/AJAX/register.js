@@ -20,8 +20,8 @@ $(document).ready(function () {
                 if(info == 'Não foi possível fazer o registro!'){
                     $('.register-erro').html(info);
                 }else{
-                    var data = JSON.parse(info);
-                    window.location.assign("./php/controllers/login.php?login="+data.name+"&pass="+data.pass);
+                    var resultado = info.split(";")
+                    window.location.assign("./php/controllers/login.php?login="+resultado[0]+"&pass="+resultado[1]);
                 }
             },
             error: function (exr, sender) {
