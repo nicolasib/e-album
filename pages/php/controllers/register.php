@@ -10,6 +10,11 @@
         echo "Não foi possível fazer o registro!";
     }
     else{
-        echo $objeto = {name: $name, pass: $pass};
+        echo [
+            {
+                "name": "$name",
+                "pass": "$pass"
+            }
+        ]
     }
 ?>

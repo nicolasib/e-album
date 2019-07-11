@@ -11,7 +11,8 @@ $(document).ready(function () {
             processData: false,
             contentType: false,
             type: 'POST',
-            success: function (data) {
+            success: function (info) {
+                var data = JSON.parse(info);
                 if(data == 'Não foi possível fazer o registro!'){
                     $('.register-erro').html(data);
                 }else{
