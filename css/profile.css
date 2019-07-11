@@ -1,0 +1,169 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 0;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(-45deg, #426cf5, #6128B0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+}
+
+.wrapper .content .content-title {
+  color: #fff;
+  font-size: 2ch;
+  margin: 0 0 1ch 0;
+}
+
+.wrapper .content .form-holder {
+  border-bottom: 4px solid orangered;
+  background-color: #fff;
+  padding: 2em 6em;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.wrapper .content .form-holder form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .content .form-holder form .image-holder {
+  width: 200px;
+  height: 200px;
+  margin: 0 0 2em 0;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 2px solid #426cf5;
+}
+
+.wrapper .content .form-holder form .image-holder .degrade {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0000), to(#00000092));
+  background-image: linear-gradient(#0000, #00000092);
+  position: absolute;
+}
+
+.wrapper .content .form-holder form .image-holder input {
+  display: none;
+}
+
+.wrapper .content .form-holder form .image-holder label {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  left: 50%;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.wrapper .content .form-holder form .image-holder label:hover {
+  text-decoration: underline;
+}
+
+.wrapper .content .form-holder form .image-holder img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.wrapper .content .form-holder form .input-texts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .content .form-holder form .input-texts label {
+  margin: 0 0 0.2ch 0;
+  color: grey;
+}
+
+.wrapper .content .form-holder form .input-texts .input {
+  margin: 0 0 1ch 0;
+  padding: 0.5ch;
+  border: 1px solid lightgrey;
+}
+
+.wrapper .content .form-holder form .input-texts .input:focus {
+  border: 1px solid #426cf5;
+}
+
+.wrapper .content .form-holder form .input-texts a {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-decoration: none;
+  color: grey;
+}
+
+.wrapper .content .form-holder form .input-texts a:hover {
+  text-decoration: underline;
+}
+
+.wrapper .content .form-holder form .input-texts .btn-update {
+  border-radius: 4px;
+  border: 2px solid #426cf5;
+  color: #426cf5;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 1ch;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+  margin: 1ch 0;
+  cursor: pointer;
+}
+
+.wrapper .content .form-holder form .input-texts .btn-update:hover {
+  background-color: #426cf5;
+  color: #fff;
+}
+/*# sourceMappingURL=profile.css.map */

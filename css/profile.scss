@@ -1,0 +1,122 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+$blu: #426cf5;
+$pur: #6128B0;
+
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+h1{
+    margin: 0;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(-45deg, $blu, $pur);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        .content-title{
+            color: #fff;
+            font-size: 2ch;
+            margin: 0 0 1ch 0;
+        }
+        .form-holder{
+            border-bottom: 4px solid orangered;
+            background-color: #fff;
+            padding: 2em 6em;
+            animation-delay: 300ms;
+            form{    
+                display: flex;
+                flex-direction: column;
+                .image-holder{
+                    width: 200px;
+                    height: 200px;
+                    margin: 0 0 2em 0;
+                    position: relative;
+                    align-self: center;
+                    border: 2px solid $blu;
+                    .degrade{
+                        width: 100%;
+                        height: 100%;
+                        background-image: linear-gradient(#0000,#00000092);
+                        position: absolute;
+                    }
+                    input{
+                        display: none;
+                    }
+                    label{
+                        position: absolute;
+                        bottom: 0px;
+                        color: #fff;
+                        left: 50%;
+                        text-align: center;
+                        cursor: pointer;
+                        transform: translate(-50%,-50%);
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    img{
+                        max-width: 100%;
+                        max-height: 100%; 
+                    }
+                }
+                
+                .input-texts{
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        margin: 0 0 0.2ch 0;
+                        color: grey;
+                    }
+                    .input{
+                        margin: 0 0 1ch 0;
+                        padding: 0.5ch;
+                        border: 1px solid lightgrey;
+                        &:focus{
+                            border: 1px solid $blu;
+                        }
+                    }
+                    a{
+                        align-self: center;
+                        text-decoration: none;
+                        color: grey;
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+                    .btn-update{
+                        border-radius: 4px;
+                        border: 2px solid $blu;
+                        color: $blu;
+                        font-weight: bold;
+                        background-color: #fff;
+                        padding: 1ch;
+                        transition: ease-in-out;
+                        transition-duration: 150ms;
+                        margin: 1ch 0;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $blu;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

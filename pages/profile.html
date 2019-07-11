@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <main class="wrapper">
+        <div class="content">
+            <h1 class="content-title animated fadeInDown">
+                Atualizando informações
+            </h1>
+            <div class="form-holder animated fadeInUp">
+                <form class="form-update">
+                    <div class="image-holder">
+                        <div class="degrade"></div>
+                        <img src="https://http2.mlstatic.com/grill-chapa-manta-antiaderente-teflon-grelha-para-churrasco-D_NQ_NP_782943-MLB28329726761_102018-F.jpg" class="profile-image">
+                        <label for="user-image">Alterar imagem</label>
+                        <input type="file" name="path" id="user-image">
+                    </div>
+                    <div class="input-texts">
+                        <label>Usuário</label>
+                        <input class="input" type="text" name="name">
+                        <label>E-mail</label>
+                        <input class="input" type="email" name="email">
+                        <label>Senha</label>
+                        <input class="input" type="password" name="pass">
+                        <button class="btn-update" type="submit">Atualizar</button>
+                        <a href="#">Voltar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/AJAX/profile.js"></script>
+</body>
+</html>
