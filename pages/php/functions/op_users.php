@@ -8,7 +8,7 @@
 
         $return = upload($path, $name);
         if($return){
-            $sql = "INSERT INTO user (name_user, email_user, pass_user) VALUES ($name, $email, $pass)";
+            $sql = "INSERT INTO user (name_user, email_user, pass_user) VALUES ('$name', '$email', '$pass')";
             $consult = $conn->query($sql);
             if($consult->affected_rows == 0){
                 return 0;
@@ -33,7 +33,7 @@
 
         $return = upload($path, $name);
         if($return){
-            $sql = "UPDATE user SET name_user = $name, email_user = $email, pass_user = $pass WHERE id_user = $id";
+            $sql = "UPDATE user SET name_user = '$name', email_user = '$email', pass_user = '$pass' WHERE id_user = $id";
             $consult = $conn->query($sql);
             if($consult->affected_rows == 0){
                 return 0;
@@ -61,7 +61,7 @@
         global $conn;
         
         unlink("../../../resources/imgs/users/$name.jpeg");
-        $sql = "DELETE * FROM user WHERE name_user = $name";
+        $sql = "DELETE * FROM user WHERE name_user = '$name'";
         $consult = $conn->query($sql);
         if($consult->affected_rows == 0){
             return 0;
