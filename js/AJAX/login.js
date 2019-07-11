@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var form_Data;
     $(".login-form").submit(function(e) {
-        
+
         e.preventDefault();
         form_Data = new FormData();
         form_Data.append("name", $("input[name=name]").val());
@@ -14,9 +14,10 @@ $(document).ready(function () {
             contentType: false,
             type: 'POST',
             success: function (info) {
-                alert(info);
                 if(info == 'Email ou senha errado!'){
                     $('.register-erro').html(info);
+                }else if(info == 1){
+                    window.location.assign("./album.html");
                 }
             },
             error: function (exr, sender) {
