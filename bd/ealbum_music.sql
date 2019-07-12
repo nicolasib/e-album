@@ -56,7 +56,7 @@ create table if not exists card_music(
 INSERT INTO singer(id_singer, name_singer) VALUES
 	(1,"Eminem (Marshall Bruce Mathers III)");
     
-INSERT INTO player(id_team, id_player, name_player) VALUES
+INSERT INTO music(id_singer, id_music, name_music) VALUES
 	(1, 1,"Lose Yourself"),
     (1, 2,"Till I Collapse"),
     (1, 3,"The Real Slim Shady"),
