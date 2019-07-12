@@ -230,6 +230,18 @@ h1, h2, h3, h4 {
   padding: 5em;
 }
 
+@media (max-width: 528px) {
+  .page-content {
+    height: auto;
+  }
+}
+
+@media (max-width: 940px) {
+  .page-content {
+    padding: 100px 1em 0 1em;
+  }
+}
+
 .page-content .album {
   width: 100%;
 }
@@ -258,14 +270,14 @@ h1, h2, h3, h4 {
 .page-content .album .stickers-wrapper .sticker {
   margin: 0 1em 1em 0;
   width: 150px;
-  height: 180px;
+  height: 150px;
   border: 2px solid #426cf5;
 }
 
 @media (max-width: 1366px) {
   .page-content .album .stickers-wrapper .sticker {
     margin: 0 1em 1em 0;
-    width: 120px !important;
+    width: 150px !important;
     height: 150px !important;
     border: 2px solid #426cf5;
   }
@@ -301,8 +313,11 @@ h1, h2, h3, h4 {
 }
 
 .hidden {
-  display: none !important;
   -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  display: none !important;
   transition: ease-in-out;
   -webkit-transition-duration: 100ms;
           transition-duration: 100ms;
@@ -343,6 +358,12 @@ h1, h2, h3, h4 {
   padding: 2ch;
   background-color: #fff;
   z-index: 199;
+}
+
+@media (max-width: 940px) {
+  .confirm-modal {
+    margin: 25% 10% 0 10%;
+  }
 }
 
 .confirm-modal .modal-submit {
@@ -390,5 +411,201 @@ h1, h2, h3, h4 {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.collapsed-wrapper {
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  background-image: linear-gradient(-45deg, #426cf5, #6128B0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.collapsed-wrapper .collapsed-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100vw;
+  padding: 2em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.collapsed-wrapper .collapsed-options .close-collapsed {
+  background-color: #0000;
+  border: none;
+  color: #fff;
+  font-size: 2ch;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-weight: bold;
+}
+
+.collapsed-wrapper .collapsed-options .profile-data .profile-img {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #fff;
+}
+
+.collapsed-wrapper .collapsed-options .profile-data .profile-img img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.collapsed-wrapper .collapsed-options .profile-data .profile-welcome {
+  color: #fff;
+  margin: 10px 0 0 0;
+  font-size: 16pt;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu {
+  width: 100%;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-btn-disabled {
+  width: 100%;
+  border-radius: 2px;
+  border-left: 3px solid #919191;
+  background-color: #ffffff30;
+  padding: 1em;
+  cursor: default;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  font-weight: 500;
+  margin: 1em 0 0 0;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-btn-disabled .options-btn-icon {
+  width: 16px;
+  height: 16px;
+  background-color: #919191;
+  margin: 0 1ch 0 0;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-btn-disabled .options-btn-label {
+  color: #919191;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-title {
+  color: #fff;
+  position: relative;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  margin: 0 0 0 10px;
+  height: 2px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 65%;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-btn {
+  width: 100%;
+  border-radius: 2px;
+  border-left: 3px solid #ff6600;
+  background-color: #ffffff30;
+  padding: 1em;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  font-weight: 500;
+  margin: 1em 0 0 0;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-btn:hover {
+  background-color: #fff;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-btn:hover .options-btn-label {
+  color: #426cf5;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-btn .options-btn-icon {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  margin: 0 1ch 0 0;
+}
+
+.collapsed-wrapper .collapsed-options .options-menu .options-btn .options-btn-label {
+  color: #fff;
+}
+
+.collapsed-wrapper .collapsed-options .log-out a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.collapsed-wrapper .collapsed-options .log-out a:hover {
+  text-decoration: underline;
+}
+
+.collapsed-menu {
+  width: 100vw;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  padding: 2ch 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: linear-gradient(-45deg, #426cf5, #6128B0);
+}
+
+.collapsed-menu .album-logo {
+  color: #fff;
+}
+
+.collapsed-menu .hamburger-menu {
+  background-color: #0000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2ch;
+  border: none;
 }
 /*# sourceMappingURL=album.css.map */

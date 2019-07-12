@@ -47,7 +47,7 @@ h1 {
   color: #000 !important;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .menu-bg .menu-login a {
     font-weight: 500;
   }
@@ -98,7 +98,7 @@ h1 {
   color: #fff;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .menu-bar .menu-account .menu-login a {
     font-weight: 500 !important;
   }
@@ -171,7 +171,7 @@ h1 {
   color: #fff;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .header .header-title {
     font-size: 2ch;
     margin: 0 0 5px 0;
@@ -187,7 +187,7 @@ h1 {
   color: #fff;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .header .header-subtitle {
     font-size: 1.2ch;
   }
@@ -217,7 +217,7 @@ h1 {
   height: 100%;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .header .header-cta {
     font-size: 1.2ch;
     width: 300px;
@@ -254,7 +254,7 @@ h1 {
   text-align: center;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .bout {
     height: auto;
   }
@@ -277,7 +277,7 @@ h1 {
           justify-content: center;
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .bout .cards-row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -323,7 +323,7 @@ h1 {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .bout .cards-row .bout-cards {
     margin: 0 0 20px 0;
   }
@@ -381,7 +381,7 @@ h1 {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .bout .cards-row .bout-cards .bout-card-content p {
     font-size: 12pt;
   }
@@ -470,7 +470,7 @@ h1 {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .bout .bout-title {
     font-size: 3ch !important;
   }
@@ -488,7 +488,7 @@ h1 {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .bout .bout-subtitle {
     font-size: 3ch !important;
   }
@@ -522,7 +522,7 @@ h1 {
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 528px) {
   .bout .bout-cta {
     font-size: 1.3ch;
     padding: 2ch;

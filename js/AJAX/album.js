@@ -1,5 +1,38 @@
 $(document).ready(function () {
 
+    $('.collapsed-wrapper').css("top", "-="+screen.height);
+
+
+    if(screen.width <= 940){
+        $('.side-menu').addClass('hidden');
+        $('.collapsed-menu').removeClass('hidden');
+    }else{
+        $('.side-menu').removeClass('hidden');
+        $('.collapsed-menu').addClass('hidden');
+    }
+
+    $(window).resize(function(){
+        if(screen.width <= 940){
+            $('.side-menu').addClass('hidden');
+            $('.collapsed-menu').removeClass('hidden');
+        }else{
+            $('.side-menu').removeClass('hidden');
+            $('.collapsed-menu').addClass('hidden');
+        }
+    });
+
+    $('.hamburger-menu').click(function(e){
+        e.preventDefault();
+        $('.collapsed-wrapper').animate({top: "0"}, 100, "swing");
+    });
+
+    $('.close-collapsed').click(function(e){
+        e.preventDefault();
+        $('.collapsed-wrapper').animate({top: "-"+screen.height}, 100, "swing");
+    })
+
+
+
     var team = 1;
     $.ajax({
         url: './php/controllers/cr_album.php', // Url do lado server que vai receber o arquivo
