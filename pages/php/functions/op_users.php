@@ -52,10 +52,8 @@
     function login($login, $pass){
         global $conn;
 
-        $sql = "SELECT * FROM user WHERE name_user = ? AND pass_user = ? OR email_user = ? AND pass_user = ?";
-        $consult = $conn->prepare($sql);
-        $consult->bind_param("ssss", $login, $pass, $login, $pass);
-        $consult->execute();
+        $sql = "SELECT * FROM user WHERE name_user = '".$login."' AND pass_user = '".$pass."' OR email_user = '".$login."' AND pass_user = '".$pass."'";
+        $consult = $conn->query($sql);
         if($consult->num_rows == 0){
             return 0;
         }
