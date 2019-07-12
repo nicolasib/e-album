@@ -38,7 +38,7 @@ h1, h2, h3, h4 {
   background-position: center;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1366px) {
   .side-menu {
     width: 40vw;
   }
@@ -238,7 +238,7 @@ h1, h2, h3, h4 {
       flex-flow: wrap;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1366px) {
   .page-content .album .stickers-wrapper {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -253,7 +253,7 @@ h1, h2, h3, h4 {
   border: 2px solid #426cf5;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1366px) {
   .page-content .album .stickers-wrapper .sticker {
     margin: 0 1em 1em 0;
     width: 120px !important;
