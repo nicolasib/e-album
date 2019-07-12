@@ -1,5 +1,6 @@
 <?php
     include_once('conn.php');
+    include_once('op_album.php');
     $conn = connect();
 
     //0 = erro | outro = sucesso
@@ -70,9 +71,10 @@
         }
     }
 
-    function delete($name){
+    function delete($name, $id){
         global $conn;
         
+        deleteAllOfUser($id);
         deleteImage($name);
         $sql = "DELETE FROM user WHERE name_user = ?";
         $consult = $conn->prepare($sql);

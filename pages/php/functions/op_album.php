@@ -84,4 +84,13 @@
         }
         return $states;
     }
+
+    function deleteAllOfUser($id_user) {
+        global $conn;
+        
+        $sql = "DELETE FROM card_player WHERE id_user = ?";
+        $consult = $conn->prepare($sql);
+        $consult->bind_param("i", $id_user);
+        $consult->execute();
+    }
 ?>
