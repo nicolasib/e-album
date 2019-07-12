@@ -23,27 +23,35 @@
     //0 = erro | outro = sucesso
     function upload($path, $name){
         $newPath = "../../../resources/imgs/users/$name.jpeg";
+        if ($path == $newPath) return 1;
         if(!move_uploaded_file($path, $newPath)){
             return 0;
         }
         return 1;
     }
 
+    function deleteImage($name) {
+        unlink("../../../resources/imgs/users/$name.jpeg");
+    }
+
     //0 = erro | outro = sucesso
-    function update($id, $name, $email, $pass, $path){
+    function update($id, $name, $email, $pass, $path, $oldName){
         global $conn;
 
-        $return = upload($path, $name);
+        $return = 1;
+        if ($path != "same") {
+            deleteImage($oldName);
+            $return = upload($path, $name);
+        } else if ($name != $oldName) {
+            $return = rename("../../../resources/imgs/users/$oldName.jpeg", "../../../resources/imgs/users/$name.jpeg");
+        }
         if($return){
             $sql = "UPDATE user SET name_user = ?, email_user = ?, pass_user = ? WHERE id_user = ?";
             $consult = $conn->prepare($sql);
             $consult->bind_param("sssi", $name, $email, $pass, $id);
             $consult->execute();
-            $consult = $conn->query($sql);
-            if($consult->affected_rows == 0){
-                return 0;
-            }
-            return $consult->affected_rows;
+            if($consult->affected_rows)
+                return $consult->affected_rows;
         }
         return 0;
     }
@@ -65,7 +73,7 @@
     function delete($name){
         global $conn;
         
-        unlink("../../../resources/imgs/users/$name.jpeg");
+        deleteImage($name);
         $sql = "DELETE FROM user WHERE name_user = ?";
         $consult = $conn->prepare($sql);
         $consult->bind_param("s", $name);
@@ -79,7 +87,18 @@
     function userExists($name, $email) {
         global $conn;
         
-        $sql = "SELECT * FROM user WHERE name_user = '".$name."' OR email_user = '".$email."'";
+        $sql = "SELECT * FROM user WHERE name_user = '$name' OR email_user = '$email'";
+        $consult = $conn->query($sql);
+        if($consult->num_rows == 0){
+            return 0;
+        }
+        return 1;
+    }
+
+    function userCollide($name, $email, $id) {
+        global $conn;
+        
+        $sql = "SELECT * FROM user WHERE (name_user = '$name' OR email_user = '$email') AND id_user != $id";
         $consult = $conn->query($sql);
         if($consult->num_rows == 0){
             return 0;

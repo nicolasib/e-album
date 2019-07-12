@@ -2,18 +2,40 @@
     include_once("../functions/op_users.php");
     session_start();
     $id = $_SESSION["id"];
-    $name = $_SESSION["name"];
+    $name = $_REQUEST["name"];
     $email = $_REQUEST["email"];
     $pass = $_REQUEST["pass"];
-    $path = "../../../resources/imgs/users/$name.jpeg";
+    if(isset($_FILES["path"]))
+        $path = $_FILES["path"]["tmp_name"];
+    else
+        $path = "same";
 
-    $return = update($id, $name, $email, $pass, $path);
-    if($return == 0){
-        echo "Não foi possível fazer a(s) alteração(ões)!";
+    if ($name == $_SESSION['name'] && $email == $_SESSION['email'] 
+    && $pass == $_SESSION['pass']) {
+        if($path == "same")
+            echo "$name;$pass";
+        else {
+            $return = upload($path, $name);
+            if($return == 0){
+                echo "Não foi possível fazer a(s) alteração(ões)!";
+            }
+            else{
+                echo "$name;$pass";
+            }
+        }
     }
-    else{
-        $_SESSION["email"] = $email;
-        $_SESSION["pass"] = $pass;
-        header("location: ../../album.php");
+    else {
+        if(userCollide($name, $email, $id)) {
+            echo "Informações já pertencem a um usuário cadastrado!";
+        }
+        else {
+            $return = update($id, $name, $email, $pass, $path, $_SESSION['name']);
+            if($return == 0){
+                echo "Não foi possível fazer a(s) alteração(ões)!";
+            }
+            else{
+                echo "$name;$pass";
+            }
+        }
     }
 ?>
