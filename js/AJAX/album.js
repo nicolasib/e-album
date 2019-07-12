@@ -15,7 +15,7 @@ $(document).ready(function () {
     function modal(id) { //Abre o modal
         //Aqui vai ter criação do modal e setar o evento onClick do botão salvar
         //do modal, para chamar a função do ajax
-        if($("[#" + id + "]").attr('class') == "player-disabled") //Cola Card
+        if($("#" + id).attr('class') == "player-disabled") //Cola Card
             saveCard(id);
         else //Descola Card
             deleteCard(id);
