@@ -49,6 +49,10 @@ h1, h2, h3, h4 {
     width: 150px !important;
     height: 150px !important;
   }
+  .side-menu .profile-img img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+  }
   .side-menu .options-title {
     color: #fff;
     position: relative;
@@ -103,6 +107,11 @@ h1, h2, h3, h4 {
   width: 200px;
   height: 200px;
   border: 2px solid #fff;
+}
+
+.side-menu .profile-data .profile-img img {
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
 
 .side-menu .profile-data .profile-welcome {

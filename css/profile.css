@@ -166,4 +166,24 @@ h1 {
   background-color: #426cf5;
   color: #fff;
 }
+
+.wrapper .content .form-holder form .input-texts .btn-delete {
+  border-radius: 4px;
+  border: 2px solid red;
+  color: red;
+  font-weight: bold;
+  background-color: #fff;
+  padding: 1ch;
+  -webkit-transition: ease-in-out;
+  transition: ease-in-out;
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+  margin: 1ch 0;
+  cursor: pointer;
+}
+
+.wrapper .content .form-holder form .input-texts .btn-delete:hover {
+  background-color: red;
+  color: #fff;
+}
 /*# sourceMappingURL=profile.css.map */

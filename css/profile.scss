@@ -115,6 +115,22 @@ h1{
                             color: #fff;
                         }
                     }
+                    .btn-delete{
+                        border-radius: 4px;
+                        border: 2px solid red;
+                        color: red;
+                        font-weight: bold;
+                        background-color: #fff;
+                        padding: 1ch;
+                        transition: ease-in-out;
+                        transition-duration: 150ms;
+                        margin: 1ch 0;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: red;
+                            color: #fff;
+                        }
+                    }
                 }
             }
         }

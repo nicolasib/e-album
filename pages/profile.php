@@ -35,8 +35,8 @@
                         <input class="input" type="email" name="email" value="<?php echo $email;?>">
                         <label>Senha</label>
                         <input class="input" type="password" name="pass" value="<?php echo $pass;?>">
-                        <button class="btn" id="1" type="submit">Atualizar</button>
-                        <button class="btn" id="0" type="submit">Deletar</button>
+                        <button class="btn-update" id="1" type="submit">Atualizar</button>
+                        <button class="btn-delete" id="0" type="submit">Deletar</button>
                         <a href="album.php">Voltar</a>
                     </div>
                 </form>
