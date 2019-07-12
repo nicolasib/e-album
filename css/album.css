@@ -270,4 +270,11 @@ h1, h2, h3, h4 {
     border: 2px solid #426cf5;
   }
 }
+
+img.player-disabled {
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray; /* IE */
+}
 /*# sourceMappingURL=album.css.map */
