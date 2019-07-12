@@ -7,8 +7,11 @@ $(document).ready(function () {
         $(identifier).html("<img src='" + img_path + "'>");
     }
 
+    var idFigura;
     //COLA FIGURINHA
-    $(".sticker").on("click", function () { //Clique no espaço da figura
+    $(".sticker").click(function (e) { //Clique no espaço da figura
+        e.preventDefault();
+        e.stopPropagation();
         modal($(this).attr('id'));
     })
 
@@ -16,22 +19,24 @@ $(document).ready(function () {
         //Aqui vai ter criação do modal e setar o evento onClick do botão salvar
         //do modal, para chamar a função do ajax
         $('.modal-wrapper').removeClass('hidden');
-        
-        $('.modal-submit').click(function(e){
-            if($("#" + id).attr('class').match(/player-disabled/)){
-                saveCard(id);
-                destroyModal(e);
-            } //Cola Card
-            else{
-                deleteCard(id);
-                destroyModal();
-            } //Descola Card
-        });
-
-        $('.modal-cancel').click(function(e){
-            destroyModal(e);
-        })
+        idFigura = id;
     }
+
+    $('.modal-submit').click(function(e){
+        e.preventDefault();
+        if($("#" + idFigura).attr('class').match(/player-disabled/)){
+            saveCard(idFigura);
+            destroyModal(e);
+        } //Cola Card
+        else{
+            deleteCard(idFigura);
+            destroyModal(e);
+        } //Descola Card
+    });
+
+    $('.modal-cancel').click(function(e){
+        destroyModal(e);
+    })
 
     function saveCard(id) {
         $.ajax({
