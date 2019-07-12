@@ -9,9 +9,10 @@
         $sql = "INSERT INTO card_player (id_user, id_team, id_player, amount) VALUES (?, ?, ?, ?)";
         $consult = $conn->query($sql);
         $consult = $conn->prepare($sql);
-        $consult->bind_param("sssi", $id_user, $id_team, $id_player, 0);
+        $amount = 1;
+        $consult->bind_param("sssi", $id_user, $id_team, $id_player, $amount);
         $consult->execute();
-        if($consult->affected_rows == 0){
+        if(!$consult->affected_rows){
             return 0;
         }
         return $consult->affected_rows;
@@ -48,10 +49,8 @@
     function cardExists($id_user, $id_team, $id_player) {
         global $conn;
         
-        $sql = "SELECT * FROM card_player WHERE id_user = ?, id_team = ?, id_player = ?";
-        $consult = $conn->prepare($sql);
-        $consult->bind_param("sss", $id_user,$id_team, $id_player);
-        $consult->execute();
+        $sql = "SELECT * FROM card_player WHERE id_user = $id_user, id_team = $id_team, id_player = $id_player";
+        $consult = $conn->query($sql);
         if($consult->num_rows == 0){
             return 0;
         }
