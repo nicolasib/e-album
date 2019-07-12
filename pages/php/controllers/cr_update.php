@@ -5,11 +5,10 @@
     $name = $_REQUEST["name"];
     $email = $_REQUEST["email"];
     $pass = $_REQUEST["pass"];
-    if(isset($_FILES["path"]))
+    if(isset($_FILES["path"]["tmp_name"]))
         $path = $_FILES["path"]["tmp_name"];
     else
         $path = "same";
-
     if ($name == $_SESSION['name'] && $email == $_SESSION['email'] 
     && $pass == $_SESSION['pass']) {
         if($path == "same")

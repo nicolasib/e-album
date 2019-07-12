@@ -24,6 +24,7 @@
                 <form method="post" action="" class="form-update">
                     <div class="image-holder">
                         <div class="degrade"></div>
+                        <input type="text" id="first_img" style="display:hidden;" value="../resources/imgs/users/<?php echo $name;?>.jpeg">
                         <img id="image-preview" src="../resources/imgs/users/<?php echo $name;?>.jpeg" class="profile-image">
                         <label for="user-image">Alterar imagem</label>
                         <input type="file" name="path" id="user-image">
