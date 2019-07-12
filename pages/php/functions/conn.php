@@ -2,7 +2,7 @@
 	function connect() {
 		$host = "localhost";
 		$user = "root";
-		$pass = "";
+		$pass = "root";
 		$base = "ealbum";
 
 		$conector = new mysqli($host, $user, $pass, $base);
