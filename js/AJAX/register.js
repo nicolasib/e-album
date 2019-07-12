@@ -1,5 +1,11 @@
 $(document).ready(function () {
     var form_Data;
+    $("#input-image").on("change", function () {
+        if(this.files[0].size > 446609){
+            alert("Imagem é muito grande!");
+            this.value = "";
+        }
+    });
     $(".login-form").submit(function(e) {
         e.preventDefault();
         form_Data = new FormData();
