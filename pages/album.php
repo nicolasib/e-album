@@ -51,16 +51,16 @@
                                     vão ser o nome das seleções) -->
                 </h1>
                 <div class="stickers-wrapper">
-                    <div class="sticker player-disabled" id="1"></div>
-                    <div class="sticker player-disabled" id="2"></div>
-                    <div class="sticker player-disabled" id="3"></div>
-                    <div class="sticker player-disabled" id="4"></div>
-                    <div class="sticker player-disabled" id="5"></div>
-                    <div class="sticker player-disabled" id="6"></div>
-                    <div class="sticker player-disabled" id="7"></div>
-                    <div class="sticker player-disabled" id="8"></div>
-                    <div class="sticker player-disabled" id="9"></div>
-                    <div class="sticker player-disabled" id="10"></div>
+                    <div class="sticker" id="1"></div>
+                    <div class="sticker" id="2"></div>
+                    <div class="sticker" id="3"></div>
+                    <div class="sticker" id="4"></div>
+                    <div class="sticker" id="5"></div>
+                    <div class="sticker" id="6"></div>
+                    <div class="sticker" id="7"></div>
+                    <div class="sticker" id="8"></div>
+                    <div class="sticker" id="9"></div>
+                    <div class="sticker" id="10"></div>
                 </div>
             </div>
         </section>

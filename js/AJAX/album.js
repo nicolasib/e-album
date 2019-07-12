@@ -1,11 +1,32 @@
 $(document).ready(function () {
 
-    //CARREGA IMAGENS
-    for(var i = 1; i < 11; i++) {
-        var identifier = ".sticker[id=" + i + "]";
-        var img_path = "../resources/imgs/cardsP/1/" + i + ".jpeg";
-        $(identifier).html("<img src='" + img_path + "'>");
-    }
+    var team = 1;
+    $.ajax({
+        url: './php/controllers/cr_album.php', // Url do lado server que vai receber o arquivo
+        data: {team: team},
+        type: 'POST',
+        success: function (info) {
+            if(info) {
+                var estados = info.split(';');
+                //CARREGA IMAGENS
+                for(var i = 0; i < 10; i++) {
+                    var identifier = ".sticker[id=" + (i+1) + "]";
+                    var img_path = "../resources/imgs/cardsP/1/" + (i+1) + ".jpeg";
+                    $(identifier).html("<img src='" + img_path + "'>");
+                    if (Number(estados[i]) == 1)
+                        $(identifier).addClass("player-enabled");
+                    else 
+                        $(identifier).addClass("player-disabled");
+                }
+            }
+            else {
+                alert("Erro ao acessar banco de figurinhas!");
+            }
+        },
+        error: function (exr, sender) {
+            alert('Erro ao carregar pagina');
+        }
+    });
 
     var idFigura;
     //COLA FIGURINHA
@@ -44,7 +65,13 @@ $(document).ready(function () {
             data: {id: id},
             type: 'POST',
             success: function (info) {
-                alert(info);
+                if(info) {
+                    $("#" + idFigura).removeClass("player-disabled")
+                    $("#" + idFigura).addClass("player-enabled")
+                }
+                else {
+                    alert("Erro ao acessar banco de figurinhas!");
+                }
             },
             error: function (exr, sender) {
                 alert('Erro ao carregar pagina');
@@ -58,7 +85,13 @@ $(document).ready(function () {
             data: {id: id},
             type: 'POST',
             success: function (info) {
-                alert(info);
+                if(info) {
+                    $("#" + idFigura).removeClass("player-enabled")
+                    $("#" + idFigura).addClass("player-disabled")
+                }
+                else {
+                    alert("Erro ao acessar banco de figurinhas!");
+                }
             },
             error: function (exr, sender) {
                 alert('Erro ao carregar pagina');
