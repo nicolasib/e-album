@@ -11,7 +11,7 @@ $(document).ready(function () {
                 //CARREGA IMAGENS
                 for(var i = 0; i < 10; i++) {
                     var identifier = ".sticker[id=" + (i+1) + "]";
-                    var img_path = "../resources/imgs/cardsP/1/" + (i+1) + ".jpeg";
+                    var img_path = "../resources/imgs/cardsM/1/" + (i+1) + ".jpeg";
                     $(identifier).html("<img src='" + img_path + "'>");
                     if (Number(estados[i]) == 1)
                         $(identifier).addClass("player-enabled");
