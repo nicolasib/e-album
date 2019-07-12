@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="../css/album.css">
 </head>
 <body>
+    <section class="modal-wrapper hidden">
+        <div class="confirm-modal">
+            <h1 class="modal-title">Tem certeza que deseja colar?</h1>
+            <button class="modal-submit">Sim</button>
+            <button class="modal-cancel">Não</button>
+        </div>
+        <div class="modal-background"></div>
+    </section>
     <main class="wrapper">
         <nav class="side-menu">
             <h1 class="album-logo">e-Álbum</h1>
