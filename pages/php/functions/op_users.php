@@ -35,7 +35,10 @@
 
         $return = upload($path, $name);
         if($return){
-            $sql = "UPDATE user SET name_user = '$name', email_user = '$email', pass_user = '$pass' WHERE id_user = $id";
+            $sql = "UPDATE user SET name_user = ?, email_user = ?, pass_user = ? WHERE id_user = ?";
+            $consult = $conn->prepare($sql);
+            $consult->bind_param("sssi", $name, $email, $pass, $id);
+            $consult->execute();
             $consult = $conn->query($sql);
             if($consult->affected_rows == 0){
                 return 0;
@@ -49,8 +52,10 @@
     function login($login, $pass){
         global $conn;
 
-        $sql = "SELECT * FROM user WHERE name_user = '".$login."' AND pass_user = '".$pass."' OR email_user = '".$login."' AND pass_user = '".$pass."'";
-        $consult = $conn->query($sql);
+        $sql = "SELECT * FROM user WHERE name_user = ? AND pass_user = ? OR email_user = ? AND pass_user = ?";
+        $consult = $conn->prepare($sql);
+        $consult->bind_param("ssss", $login, $pass, $login, $pass);
+        $consult->execute();
         if($consult->num_rows == 0){
             return 0;
         }
@@ -76,8 +81,10 @@
     function userExists($name) {
         global $conn;
         
-        $sql = "SELECT * FROM user WHERE name_user = '$name'";
-        $consult = $conn->query($sql);
+        $sql = "SELECT * FROM user WHERE name_user = ?";
+        $consult = $conn->prepare($sql);
+        $consult->bind_param("s", $name);
+        $consult->execute();
         if($consult->num_rows == 0){
             return 0;
         }
