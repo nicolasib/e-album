@@ -216,3 +216,71 @@ h1, h2, h3, h4{
         filter: gray; /* IE */
     }
 }
+
+.hidden{
+    display: none !important;
+    transition: ease-in-out;
+    transition-duration: 100ms;
+}
+
+.modal-wrapper{
+    transition: ease-in-out;
+    transition-duration: 100ms;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0008;
+}
+.confirm-modal{
+    margin: 10% 0 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: 2ch;
+    background-color: #fff;
+    z-index: 199;
+    .modal-submit{
+        background-color: #fff;
+        border: 2px solid $blu;
+        border-radius: 4px;
+        padding: 1ch;
+        font-weight: bold;
+        color: $blu;
+        margin: 2ch 0;
+        transition: ease-in-out;
+        transition-duration: 150ms;
+        cursor: pointer;
+        &:hover{
+            background-color: $blu;
+            color: #fff;
+        }
+    }
+    .modal-cancel{
+        background-color: #fff;
+        border: 2px solid red;
+        border-radius: 4px;
+        padding: 1ch;
+        font-weight: bold;
+        color: red;
+        transition: ease-in-out;
+        transition-duration: 150ms;
+        cursor: pointer;
+        &:hover{
+            background-color: red;
+            color: #fff;
+        }
+    }
+}
+.modal-background{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+

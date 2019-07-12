@@ -15,10 +15,22 @@ $(document).ready(function () {
     function modal(id) { //Abre o modal
         //Aqui vai ter criação do modal e setar o evento onClick do botão salvar
         //do modal, para chamar a função do ajax
-        if($("#" + id).attr('class').match(/player-disabled/)) //Cola Card
-            saveCard(id);
-        else //Descola Card
-            deleteCard(id);
+        $('.modal-wrapper').removeClass('hidden');
+        
+        $('.modal-submit').click(function(e){
+            if($("#" + id).attr('class').match(/player-disabled/)){
+                saveCard(id);
+                destroyModal(e);
+            } //Cola Card
+            else{
+                deleteCard(id);
+                destroyModal();
+            } //Descola Card
+        });
+
+        $('.modal-cancel').click(function(e){
+            destroyModal(e);
+        })
     }
 
     function saveCard(id) {
@@ -49,4 +61,13 @@ $(document).ready(function () {
         });
     }
     
+    $(".modal-background").click(function(e){
+        destroyModal(e);
+    })
+
+    function destroyModal(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.modal-wrapper').addClass('hidden');
+    }
 })
