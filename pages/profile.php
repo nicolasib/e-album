@@ -40,6 +40,7 @@
                         <a href="album.php">Voltar</a>
                     </div>
                 </form>
+                <div class="register-erro"></div>
             </div>
         </div>
     </main>
