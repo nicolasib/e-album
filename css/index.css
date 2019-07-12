@@ -265,7 +265,7 @@ h1 {
           transition-duration: 300ms;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .cards-row .bout-cards {
     width: 16em;
   }
@@ -278,7 +278,7 @@ h1 {
           transition-duration: 300ms;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .cards-row .bout-cards .bout-card-title {
     font-size: 2ch;
   }
@@ -289,7 +289,7 @@ h1 {
   height: 14em;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .cards-row .bout-cards .bout-card-avatar {
     height: 10em;
   }
@@ -317,7 +317,7 @@ h1 {
   font-family: 'Lato', sans-serif;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .cards-row .bout-cards .bout-card-content p {
     font-size: 10pt;
   }
@@ -341,7 +341,7 @@ h1 {
   border-radius: 0 0 0 10px;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .cards-row .bout-cards .joaozin .back-end {
     font-size: 10pt;
   }
@@ -365,7 +365,7 @@ h1 {
   border-radius: 0 0 0 10px;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .cards-row .bout-cards .yuri .back-end {
     font-size: 10pt;
   }
@@ -389,7 +389,7 @@ h1 {
   border-radius: 0 0 0 10px;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .cards-row .bout-cards .niculinha .front-end {
     font-size: 10pt;
   }
@@ -400,7 +400,7 @@ h1 {
   color: #426cf5;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .bout-title {
     font-size: 2ch !important;
   }
@@ -411,7 +411,7 @@ h1 {
   color: #426cf5;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .bout-subtitle {
     font-size: 2ch !important;
     margin: 0 0 10px 0;
@@ -438,7 +438,7 @@ h1 {
   font-family: 'Montserrat', sans-serif;
 }
 
-@media (max-width: 1245px) {
+@media (max-width: 1366px) {
   .bout .bout-cta {
     font-size: 10pt;
     padding: 1ch;
