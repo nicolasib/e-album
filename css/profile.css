@@ -10,6 +10,18 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 414px) {
+  body {
+    overflow: scroll;
+  }
+}
+
+@media (max-height: 600px) {
+  body {
+    overflow: scroll;
+  }
+}
+
 h1 {
   margin: 0;
 }
@@ -27,6 +39,19 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 414px) {
+  .wrapper {
+    padding: 2ch 0;
+  }
+}
+
+@media (max-height: 600px) {
+  .wrapper {
+    height: auto;
+    padding: 2ch 0;
+  }
 }
 
 .wrapper .content {
@@ -57,6 +82,12 @@ h1 {
           animation-delay: 300ms;
 }
 
+@media (max-width: 414px) {
+  .wrapper .content .form-holder {
+    padding: 2em 4em;
+  }
+}
+
 .wrapper .content .form-holder form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,6 +107,13 @@ h1 {
       -ms-grid-row-align: center;
       align-self: center;
   border: 2px solid #426cf5;
+}
+
+@media (max-width: 414px) {
+  .wrapper .content .form-holder form .image-holder {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .wrapper .content .form-holder form .image-holder .degrade {
