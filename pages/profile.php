@@ -33,7 +33,7 @@
                         <label>Usuário</label>
                         <input class="input" type="text" name="name" value="<?php echo $name;?>">
                         <label>E-mail</label>
-                        <input class="input" type="email" name="email" value="<?php echo $email;?>">
+                        <input class="input" type="email" name="email" disabled value="<?php echo $email;?>">
                         <label>Senha</label>
                         <input class="input" type="password" name="pass" value="<?php echo $pass;?>">
                         <button class="btn-update" id="1" type="submit">Atualizar</button>
