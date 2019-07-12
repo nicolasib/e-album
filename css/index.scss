@@ -162,9 +162,11 @@ h1{
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    
     .bout-paragraph{
         font-family: 'Lato', sans-serif;
         width: 70vw;
+        
     }
     .cards-row{
         display: flex;
@@ -192,13 +194,24 @@ h1{
             overflow: hidden;
             box-shadow: 2px 2px 6px #00000020;
             transition-duration: 300ms;
+            @media (max-width: 1245px) {
+                width: 16em;
+            }
             &:hover{
                 box-shadow: 3px 3px 6px #00000030;
                 transition-duration: 300ms;
             }
+            .bout-card-title{
+                @media (max-width: 1245px) {
+                    font-size: 2ch;
+                }
+            }
             .bout-card-avatar{
                 width: 100%;
                 height: 14em;
+                @media (max-width: 1245px) {
+                    height: 10em;
+                }
             }
             .bout-card-content{
                 padding: 2ch;
@@ -209,6 +222,9 @@ h1{
                 text-align: center;
                 p{
                     font-family: 'Lato', sans-serif;
+                    @media (max-width: 1245px) {
+                        font-size: 10pt;
+                    }
                 }
             }
             .joaozin{
@@ -225,6 +241,9 @@ h1{
                     top: 0;
                     right: 0;
                     border-radius: 0 0 0 10px;
+                    @media (max-width: 1245px) {
+                        font-size: 10pt;
+                    }
                 }
             }
             .yuri{
@@ -241,6 +260,9 @@ h1{
                     top: 0;
                     right: 0;
                     border-radius: 0 0 0 10px;
+                    @media (max-width: 1245px) {
+                        font-size: 10pt;
+                    }
                 }
             }
             .niculinha{
@@ -257,6 +279,9 @@ h1{
                     top: 0;
                     right: 0;
                     border-radius: 0 0 0 10px;
+                    @media (max-width: 1245px) {
+                        font-size: 10pt;
+                    }
                 }
             }
 
@@ -266,13 +291,17 @@ h1{
     .bout-title{
         font-size: 4ch;
         color: $blu;
+        @media (max-width: 1245px) {
+            font-size: 2ch !important;
+        }
     }
     .bout-subtitle{
         font-size: 3ch;
         color: $blu;
-    }
-    .bout-paragraph{
-        font-size: 2ch;
+        @media (max-width: 1245px) {
+            font-size: 2ch !important;
+            margin: 0 0 10px 0;
+        }
     }
 
     .bout-cta{
@@ -290,7 +319,11 @@ h1{
         font-size: 1.3ch;
         font-weight: bolder;
         font-family: 'Montserrat', sans-serif;
-
+        @media (max-width: 1245px) {
+            font-size: 10pt;
+            padding: 1ch;
+            margin: 1ch 0 0 0;
+        }
         &:hover{
             border: 2px solid $blu;
             background-color: $blu;

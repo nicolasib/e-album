@@ -22,7 +22,7 @@ $(function(){
     })
 
     $(window).on("scroll", function() {
-        if($(window).scrollTop() > 600) {
+        if($(window).scrollTop() >= window.innerHeight || $(window).scrollTop() >= screen.height) {
           $(".menu-bar").addClass("menu-bg");
           
         } else {
