@@ -33,13 +33,18 @@ $(document).ready(function () {
     $(".sticker").click(function (e) { //Clique no espaço da figura
         e.preventDefault();
         e.stopPropagation();
-        modal($(this).attr('id'));
+        modal($(this).attr('id'), $(this).attr('class'));
     })
 
-    function modal(id) { //Abre o modal
+    function modal(id, classe) { //Abre o modal
         //Aqui vai ter criação do modal e setar o evento onClick do botão salvar
         //do modal, para chamar a função do ajax
         $('.modal-wrapper').removeClass('hidden');
+        if(classe.match(/player-disabled/)){
+            $('.modal-title').html('Tem certeza que deseja colar?');
+        }else{
+            $('.modal-title').html('Tem certeza que deseja descolar?');
+        }
         idFigura = id;
     }
 
@@ -66,8 +71,8 @@ $(document).ready(function () {
             type: 'POST',
             success: function (info) {
                 if(info) {
-                    $("#" + idFigura).removeClass("player-disabled")
-                    $("#" + idFigura).addClass("player-enabled")
+                    $("#" + idFigura).removeClass("player-disabled");
+                    $("#" + idFigura).addClass("player-enabled");
                 }
                 else {
                     alert("Erro ao acessar banco de figurinhas!");
