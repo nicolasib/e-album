@@ -271,7 +271,7 @@ h1, h2, h3, h4 {
   }
 }
 
-.player-disabled {
+.player-disabled img {
   width: 100%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);

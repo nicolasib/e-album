@@ -209,8 +209,10 @@ h1, h2, h3, h4{
     }
 }
 .player-disabled {
-    width: 100%;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: gray; /* IE */
+    img{
+        width: 100%;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        filter: gray; /* IE */
+    }
 }
