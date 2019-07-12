@@ -27,6 +27,11 @@ h1 {
   position: relative;
 }
 
+.menu-bg {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#0000));
+  background-image: linear-gradient(#fff, #0000);
+}
+
 .menu-bg .menu-home {
   color: #000 !important;
   -webkit-transition-duration: 300ms;
@@ -40,6 +45,12 @@ h1 {
 
 .menu-bg .menu-login a {
   color: #000 !important;
+}
+
+@media (max-width: 414px) {
+  .menu-bg .menu-login a {
+    font-weight: 500;
+  }
 }
 
 .menu-bg .menu-register {
@@ -85,6 +96,12 @@ h1 {
 .menu-bar .menu-account .menu-login a {
   text-decoration: none;
   color: #fff;
+}
+
+@media (max-width: 414px) {
+  .menu-bar .menu-account .menu-login a {
+    font-weight: 500 !important;
+  }
 }
 
 .menu-bar .menu-account .menu-login a:hover {
@@ -154,6 +171,13 @@ h1 {
   color: #fff;
 }
 
+@media (max-width: 414px) {
+  .header .header-title {
+    font-size: 2ch;
+    margin: 0 0 5px 0;
+  }
+}
+
 .header .header-subtitle {
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
@@ -161,6 +185,12 @@ h1 {
           animation-delay: 0.8s;
   font-size: 2ch;
   color: #fff;
+}
+
+@media (max-width: 414px) {
+  .header .header-subtitle {
+    font-size: 1.2ch;
+  }
 }
 
 .header .header-cta {
@@ -183,6 +213,15 @@ h1 {
 .header .header-cta a {
   text-decoration: none;
   color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 414px) {
+  .header .header-cta {
+    font-size: 1.2ch;
+    width: 300px;
+  }
 }
 
 .header .header-cta:hover {
@@ -215,6 +254,12 @@ h1 {
   text-align: center;
 }
 
+@media (max-width: 414px) {
+  .bout {
+    height: auto;
+  }
+}
+
 .bout .bout-paragraph {
   font-family: 'Lato', sans-serif;
   width: 70vw;
@@ -230,6 +275,13 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 414px) {
+  .bout .cards-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .bout .cards-row .fade-first {
@@ -267,7 +319,13 @@ h1 {
 
 @media (max-width: 1366px) {
   .bout .cards-row .bout-cards {
-    width: 16em;
+    width: 16em !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .bout .cards-row .bout-cards {
+    margin: 0 0 20px 0;
   }
 }
 
@@ -320,6 +378,12 @@ h1 {
 @media (max-width: 1366px) {
   .bout .cards-row .bout-cards .bout-card-content p {
     font-size: 10pt;
+  }
+}
+
+@media (max-width: 414px) {
+  .bout .cards-row .bout-cards .bout-card-content p {
+    font-size: 12pt;
   }
 }
 
@@ -406,6 +470,12 @@ h1 {
   }
 }
 
+@media (max-width: 414px) {
+  .bout .bout-title {
+    font-size: 3ch !important;
+  }
+}
+
 .bout .bout-subtitle {
   font-size: 3ch;
   color: #426cf5;
@@ -415,6 +485,12 @@ h1 {
   .bout .bout-subtitle {
     font-size: 2ch !important;
     margin: 0 0 10px 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .bout .bout-subtitle {
+    font-size: 3ch !important;
   }
 }
 
@@ -443,6 +519,14 @@ h1 {
     font-size: 10pt;
     padding: 1ch;
     margin: 1ch 0 0 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .bout .bout-cta {
+    font-size: 1.3ch;
+    padding: 2ch;
+    margin: 2ch 0 0 0;
   }
 }
 

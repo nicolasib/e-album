@@ -4,6 +4,8 @@
 $blu: #426cf5;
 $pur: #6128B0;
 
+$mobile: 414px;
+
 *{
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box !important;
@@ -26,6 +28,7 @@ h1{
 }
 
 .menu-bg{
+    background-image: linear-gradient(#fff, #0000);
     .menu-home{
         color: #000 !important;
         transition-duration: 300ms;
@@ -33,8 +36,10 @@ h1{
     .menu-login{
         transition-duration: 300ms;
         a{
-
             color: #000 !important;
+            @media (max-width: $mobile) {
+                font-weight: 500;
+            }
         }
     }
     .menu-register{
@@ -66,6 +71,9 @@ h1{
             a{
                 text-decoration: none;
                 color: #fff;
+                @media (max-width: $mobile) {
+                    font-weight: 500 !important;
+                }
                 &:hover{
                     text-decoration: underline;
                 }
@@ -118,11 +126,18 @@ h1{
         animation-delay: 0.5s;
         font-size: 4ch;
         color: #fff;
+        @media (max-width: $mobile) {
+            font-size: 2ch;
+            margin: 0 0 5px 0;
+        }
     }
     .header-subtitle{
         animation-duration: 2s;
         animation-delay: 0.8s;
         font-size: 2ch;
+        @media (max-width: $mobile) {
+            font-size: 1.2ch;
+        }
         color: #fff;
     }
     .header-cta{
@@ -140,6 +155,12 @@ h1{
         a{
             text-decoration: none;
             color: #fff;
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: $mobile) {
+            font-size: 1.2ch;
+            width: 300px;
         }
     }
     .header-cta:hover{
@@ -162,11 +183,12 @@ h1{
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    
+    @media (max-width: $mobile) {
+        height: auto;
+    }
     .bout-paragraph{
         font-family: 'Lato', sans-serif;
         width: 70vw;
-        
     }
     .cards-row{
         display: flex;
@@ -174,6 +196,9 @@ h1{
         padding: 2ch 0;
         width: 100vw;
         justify-content: center;
+        @media (max-width: $mobile) {
+            flex-wrap: wrap;
+        }
         .fade-first{
             animation-duration: 800ms;
             animation-delay: 500ms;
@@ -195,7 +220,10 @@ h1{
             box-shadow: 2px 2px 6px #00000020;
             transition-duration: 300ms;
             @media (max-width: 1366px) {
-                width: 16em;
+                width: 16em !important;
+            }
+            @media (max-width: $mobile) {
+                margin: 0 0 20px 0;
             }
             &:hover{
                 box-shadow: 3px 3px 6px #00000030;
@@ -224,6 +252,9 @@ h1{
                     font-family: 'Lato', sans-serif;
                     @media (max-width: 1366px) {
                         font-size: 10pt;
+                    }
+                    @media (max-width: $mobile) {
+                        font-size: 12pt;
                     }
                 }
             }
@@ -294,6 +325,9 @@ h1{
         @media (max-width: 1366px) {
             font-size: 2ch !important;
         }
+        @media (max-width: $mobile) {
+            font-size: 3ch !important;
+        }
     }
     .bout-subtitle{
         font-size: 3ch;
@@ -301,6 +335,9 @@ h1{
         @media (max-width: 1366px) {
             font-size: 2ch !important;
             margin: 0 0 10px 0;
+        }
+        @media (max-width: $mobile) {
+            font-size: 3ch !important;
         }
     }
 
@@ -323,6 +360,11 @@ h1{
             font-size: 10pt;
             padding: 1ch;
             margin: 1ch 0 0 0;
+        }
+        @media (max-width: $mobile) {
+            font-size: 1.3ch;
+            padding: 2ch;
+            margin: 2ch 0 0 0;
         }
         &:hover{
             border: 2px solid $blu;

@@ -3,6 +3,9 @@
 $blu: #426cf5;
 $pur: #6128B0;
 
+$mobile: 414px;
+$little-h: 600px;
+
 *{
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -11,6 +14,12 @@ $pur: #6128B0;
 body{
     margin: 0;
     overflow: hidden;
+    @media (max-width: $mobile){
+        overflow: scroll;
+    }
+    @media (max-height: $little-h) {
+        overflow: scroll;
+    }
 }
 
 h1{
@@ -24,6 +33,13 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: $mobile){
+        padding: 2ch 0;
+    }
+    @media (max-height: $little-h){
+        height: auto;
+        padding: 2ch 0;
+    }
     .content{
         display: flex;
         flex-direction: column;
@@ -39,12 +55,19 @@ h1{
             background-color: #fff;
             padding: 2em 6em;
             animation-delay: 300ms;
+            @media (max-width: $mobile){
+                padding: 2em 4em;
+            }
             form{    
                 display: flex;
                 flex-direction: column;
                 .image-holder{
                     width: 200px;
                     height: 200px;
+                    @media (max-width: $mobile) {
+                        width: 180px;
+                        height: 180px;
+                    }
                     margin: 0 0 2em 0;
                     position: relative;
                     align-self: center;
