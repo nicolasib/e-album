@@ -5,7 +5,7 @@
     $pass = $_REQUEST["pass"];
     $path = $_FILES["path"]["tmp_name"];
 
-    if(userExists($name)) {
+    if(userExists($name, $email)) {
         echo "Usuário já cadastrado!";
     }
     else {

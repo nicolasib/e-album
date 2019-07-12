@@ -76,13 +76,11 @@
         return 1;
     }
 
-    function userExists($name) {
+    function userExists($name, $email) {
         global $conn;
         
-        $sql = "SELECT * FROM user WHERE name_user = ?";
-        $consult = $conn->prepare($sql);
-        $consult->bind_param("s", $name);
-        $consult->execute();
+        $sql = "SELECT * FROM user WHERE name_user = '".$name."' OR email_user = '".$email."'";
+        $consult = $conn->query($sql);
         if($consult->num_rows == 0){
             return 0;
         }
