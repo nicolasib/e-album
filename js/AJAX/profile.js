@@ -1,25 +1,21 @@
 $(document).ready(function () {
 
+    var file = "";
+
     //PREVIEW
     $("#user-image").on("change", function () {
-        var form_Data = new FormData();
-        var formfiles = document.querySelector('#user-image');
-        form_Data.append("path", formfiles.files[0]);
-
-        $.ajax({
-            url: './php/controllers/cr_preview.php', // Url do lado server que vai receber o arquivo
-            data: form_Data,
-            processData: false,
-            contentType: false,
-            type: 'POST',
-            success: function (info) {
-                $("#image-preview").attr("src", info);
-            },
-            error: function (exr, sender) {
-                alert('Erro ao carregar pagina');
-            }
-        });
-    })
+        if(this.files[0].size > 446609){
+            alert("Imagem é muito grande!");
+            this.value = "";
+            $("#image-preview").attr("src", $('#first_img').val());
+        } else {
+            var form_Data = new FormData();
+            var formfiles = document.querySelector('#user-image');
+            form_Data.append("path", formfiles.files[0]);
+            file = URL.createObjectURL(formfiles.files[0]);
+            $("#image-preview").attr("src", file);
+        }
+    });
 
     //DIFERENCIA BUTTONS
     var clicked;
