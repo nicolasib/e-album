@@ -21,10 +21,10 @@
                 Atualizando informações
             </h1>
             <div class="form-holder animated fadeInUp">
-                <form class="form-update">
-                    <div style="overflow: hidden" class="image-holder">
+                <form method="post" action="" class="form-update">
+                    <div class="image-holder">
                         <div class="degrade"></div>
-                        <img style="height: 100%" src="../resources/imgs/users/<?php echo $name;?>.jpeg" class="profile-image">
+                        <img src="../resources/imgs/users/<?php echo $name;?>.jpeg" class="profile-image">
                         <label for="user-image">Alterar imagem</label>
                         <input type="file" name="path" id="user-image">
                     </div>
@@ -35,8 +35,9 @@
                         <input class="input" type="email" name="email" value="<?php echo $email;?>">
                         <label>Senha</label>
                         <input class="input" type="password" name="pass" value="<?php echo $pass;?>">
-                        <button class="btn-update" type="submit">Atualizar</button>
-                        <a href="#">Voltar</a>
+                        <button class="btn" id="1" type="submit">Atualizar</button>
+                        <button class="btn" id="0" type="submit">Deletar</button>
+                        <a href="album.php">Voltar</a>
                     </div>
                 </form>
             </div>

@@ -63,8 +63,10 @@
         global $conn;
         
         unlink("../../../resources/imgs/users/$name.jpeg");
-        $sql = "DELETE * FROM user WHERE name_user = '$name'";
-        $consult = $conn->query($sql);
+        $sql = "DELETE FROM user WHERE name_user = ?";
+        $consult = $conn->prepare($sql);
+        $consult->bind_param("s", $name);
+        $consult->execute();
         if($consult->affected_rows == 0){
             return 0;
         }

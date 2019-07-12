@@ -173,6 +173,11 @@ h1, h2, h3, h4 {
 
 .side-menu .options-menu .options-btn .options-btn-label {
   color: #fff;
+  text-decoration: none;
+}
+
+.side-menu .options-menu a{
+  text-decoration: none;
 }
 
 .side-menu .options-menu .options-btn-disabled {

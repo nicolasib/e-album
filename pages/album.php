@@ -15,16 +15,18 @@
             <h1 class="album-logo">e-Álbum</h1>
             <div class="profile-data">
                 <div style="overflow: hidden" class="profile-img">
-                    <img style="height: 100%" src="../resources/imgs/users/<?php echo $name;?>.jpeg">
+                    <img src="../resources/imgs/users/<?php echo $name;?>.jpeg">
                 </div>
                 <h2 class="profile-welcome">Bem vindo <?php echo $name;?>!</h2><!-- Usuário = usuário logado (Session PHP) -->
             </div>
             <div class="options-menu">
                 <h4 class="options-title">Opções</h4>
-                <div class="options-btn">
-                    <div class="options-btn-icon"></div>
-                    <span class="options-btn-label">Perfil</span>
-                </div>
+                <a href="profile.php">
+                    <div class="options-btn">
+                        <div class="options-btn-icon"></div>
+                        <span class="options-btn-label">Perfil</span>
+                    </div>
+                </a>
                 <div class="options-btn-disabled">
                     <div class="options-btn-icon"></div>
                     <span class="options-btn-label">Novo Álbum</span> <!-- pode ser útil no futuro
