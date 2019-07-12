@@ -85,6 +85,7 @@ h1{
     }
     .menu-home{
         font-weight: bold;
+        cursor: default;
         font-size: 2ch;
         color: #fff;
         transition-duration: 300ms;
@@ -160,6 +161,7 @@ h1{
     padding: 2ch 0;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
     .bout-paragraph{
         font-family: 'Lato', sans-serif;
         width: 70vw;
@@ -212,14 +214,50 @@ h1{
             .joaozin{
                 background: url('../resources/imgs/index/team/jao.PNG');
                 background-size: cover;
+                position: relative;
+                .back-end{
+                    cursor: default;
+                    position: absolute;
+                    color: #fff;
+                    font-weight: 500;
+                    background-color: $blu;
+                    padding: 10px;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 0 0 10px;
+                }
             }
             .yuri{
                 background: url('../resources/imgs/index/team/yuri.png');
                 background-size: cover;
+                position: relative;
+                .back-end{
+                    cursor: default;
+                    position: absolute;
+                    color: #fff;
+                    font-weight: 500;
+                    background-color: $blu;
+                    padding: 10px;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 0 0 10px;
+                }
             }
             .niculinha{
                 background: url('../resources/imgs/index/team/eu.png');
                 background-size: cover;
+                position: relative;
+                .front-end{
+                    cursor: default;
+                    position: absolute;
+                    color: #fff;
+                    font-weight: 500;
+                    background-color: #ff6e1b;
+                    padding: 10px;
+                    top: 0;
+                    right: 0;
+                    border-radius: 0 0 0 10px;
+                }
             }
 
         }

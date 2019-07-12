@@ -108,6 +108,7 @@ h1 {
 
 .menu-bar .menu-home {
   font-weight: bold;
+  cursor: default;
   font-size: 2ch;
   color: #fff;
   -webkit-transition-duration: 300ms;
@@ -211,6 +212,7 @@ h1 {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  text-align: center;
 }
 
 .bout .bout-paragraph {
@@ -300,16 +302,55 @@ h1 {
 .bout .cards-row .bout-cards .joaozin {
   background: url("../resources/imgs/index/team/jao.PNG");
   background-size: cover;
+  position: relative;
+}
+
+.bout .cards-row .bout-cards .joaozin .back-end {
+  cursor: default;
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+  background-color: #426cf5;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 10px;
 }
 
 .bout .cards-row .bout-cards .yuri {
   background: url("../resources/imgs/index/team/yuri.png");
   background-size: cover;
+  position: relative;
+}
+
+.bout .cards-row .bout-cards .yuri .back-end {
+  cursor: default;
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+  background-color: #426cf5;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 10px;
 }
 
 .bout .cards-row .bout-cards .niculinha {
   background: url("../resources/imgs/index/team/eu.png");
   background-size: cover;
+  position: relative;
+}
+
+.bout .cards-row .bout-cards .niculinha .front-end {
+  cursor: default;
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+  background-color: #ff6e1b;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 10px;
 }
 
 .bout .bout-title {

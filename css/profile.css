@@ -147,7 +147,7 @@ h1 {
   text-decoration: underline;
 }
 
-.wrapper .content .form-holder form .input-texts .btn {
+.wrapper .content .form-holder form .input-texts .btn-update {
   border-radius: 4px;
   border: 2px solid #426cf5;
   color: #426cf5;
@@ -162,7 +162,7 @@ h1 {
   cursor: pointer;
 }
 
-.wrapper .content .form-holder form .input-texts .btn:hover {
+.wrapper .content .form-holder form .input-texts .btn-update:hover {
   background-color: #426cf5;
   color: #fff;
 }
