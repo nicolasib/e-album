@@ -1,4 +1,12 @@
-<?php session_start(); $name = $_SESSION["name"];?>
+<?php 
+    session_start();     
+    
+    if(isset($_SESSION["name"])){
+        $name = $_SESSION["name"];
+    }else{
+        Header("location: ./login.html");
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -82,7 +90,8 @@
         <section class="page-content">
             <div class="album">
                 <h1 class="album-title">
-                    Seleção Brasileira <!--  Muda o nome durante a criação de um novo album 
+                    Eminem
+                    <!--  Muda o nome durante a criação de um novo album 
                                     (no futuro vai ser de seleções, dai esse titulo
                                     vão ser o nome das seleções) -->
                 </h1>

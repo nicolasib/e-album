@@ -4,7 +4,7 @@
 $blu: #426cf5;
 $pur: #6128B0;
 
-$mobile: 528px;
+$large: 560px;
 
 *{
     font-family: 'Montserrat', sans-serif;
@@ -19,6 +19,25 @@ body{
 
 h1{
     margin: 0;
+}
+
+@media (min-width: $large){
+    .header-title{
+        font-size: 30px !important;
+    }
+    .header-subtitle{
+        font-size: 18px !important;
+    }
+    .cards-row{
+        flex-wrap: nowrap !important;
+    }
+    .bout-cards{
+        margin: 20px !important;
+        width: 300px !important;
+    }
+    .bout-card-avatar{
+        height: 200px !important;
+    }
 }
 
 .main-wrapper{
@@ -37,9 +56,7 @@ h1{
         transition-duration: 300ms;
         a{
             color: #000 !important;
-            @media (max-width: $mobile) {
-                font-weight: 500;
-            }
+            font-weight: 500;
         }
     }
     .menu-register{
@@ -64,16 +81,13 @@ h1{
     height: 4em;
     transition-duration: 400ms;
     .menu-account{
-        padding: 0 2ch 0 0;
         .menu-login{
             margin: 0 1ch 0 0;
             transition-duration: 300ms;
             a{
                 text-decoration: none;
                 color: #fff;
-                @media (max-width: $mobile) {
-                    font-weight: 500 !important;
-                }
+                
                 &:hover{
                     text-decoration: underline;
                 }
@@ -94,7 +108,7 @@ h1{
     .menu-home{
         font-weight: bold;
         cursor: default;
-        font-size: 2ch;
+        font-size: 18px;
         color: #fff;
         transition-duration: 300ms;
     }
@@ -124,20 +138,15 @@ h1{
     .header-title{
         animation-duration: 1s;
         animation-delay: 0.5s;
-        font-size: 4ch;
+        font-size: 24px;
         color: #fff;
-        @media (max-width: $mobile) {
-            font-size: 2ch;
-            margin: 0 0 5px 0;
-        }
+        
     }
     .header-subtitle{
         animation-duration: 2s;
         animation-delay: 0.8s;
-        font-size: 2ch;
-        @media (max-width: $mobile) {
-            font-size: 1.2ch;
-        }
+        font-size: 14px;
+        
         color: #fff;
     }
     .header-cta{
@@ -149,7 +158,7 @@ h1{
         border: 2px solid #fff;
         cursor: pointer;
         margin: 2ch 0 0 0;
-        font-size: 1.5ch;
+        font-size: 14px;
         font-weight: 500;
         padding: 1ch;
         a{
@@ -158,10 +167,7 @@ h1{
             width: 100%;
             height: 100%;
         }
-        @media (max-width: $mobile) {
-            font-size: 1.2ch;
-            width: 300px;
-        }
+        
     }
     .header-cta:hover{
         background-color: #fff;
@@ -175,30 +181,41 @@ h1{
  /* BOUT */
 
 .bout{
-    height: 100vh;
+    height: auto;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    padding: 2ch 0;
+    padding: 6ch 0;
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    @media (max-width: $mobile) {
-        height: auto;
+
+    .bout-title{
+        font-size: 24px;
+        color: $blu;
+        
     }
+    .bout-subtitle{
+        font-size: 24px;
+        color: $blu;
+        margin: 20px;
+        
+    }
+    
     .bout-paragraph{
         font-family: 'Lato', sans-serif;
-        width: 70vw;
+        width: 100%;
+        padding: 0 2ch;
+
     }
     .cards-row{
         display: flex;
+        flex-wrap: wrap;
         background-image: linear-gradient(-45deg, $blu, $pur);
-        padding: 2ch 0;
+        padding: 20px;
         width: 100vw;
         justify-content: center;
-        @media (max-width: $mobile) {
-            flex-wrap: wrap;
-        }
+        
         .fade-first{
             animation-duration: 800ms;
             animation-delay: 500ms;
@@ -212,34 +229,22 @@ h1{
             animation-delay: 1.5s;
         }
         .bout-cards{
+            margin: 20px 0;
             background-color: #fff;
-            width: 20em;
-            margin: 0 2ch 0 0;
-            border-radius: 2px;
+            width: 100%;
+            border-radius: 4px;
             overflow: hidden;
             box-shadow: 2px 2px 6px #00000020;
             transition-duration: 300ms;
-            @media (max-width: 1366px) {
-                width: 16em !important;
-            }
-            @media (max-width: $mobile) {
-                margin: 0 0 20px 0;
-            }
+            
             &:hover{
                 box-shadow: 3px 3px 6px #00000030;
                 transition-duration: 300ms;
             }
-            .bout-card-title{
-                @media (max-width: 1366px) {
-                    font-size: 2ch;
-                }
-            }
             .bout-card-avatar{
                 width: 100%;
                 height: 14em;
-                @media (max-width: 1366px) {
-                    height: 10em;
-                }
+                
             }
             .bout-card-content{
                 padding: 2ch;
@@ -250,12 +255,7 @@ h1{
                 text-align: center;
                 p{
                     font-family: 'Lato', sans-serif;
-                    @media (max-width: 1366px) {
-                        font-size: 10pt;
-                    }
-                    @media (max-width: $mobile) {
-                        font-size: 12pt;
-                    }
+                    
                 }
             }
             .joaozin{
@@ -272,13 +272,11 @@ h1{
                     top: 0;
                     right: 0;
                     border-radius: 0 0 0 10px;
-                    @media (max-width: 1366px) {
-                        font-size: 10pt;
-                    }
+                    
                 }
             }
             .yuri{
-                background: url('../resources/imgs/index/team/yuri.png');
+                background: url('../resources/imgs/index/team/yuri.PNG');
                 background-size: cover;
                 position: relative;
                 .back-end{
@@ -291,13 +289,11 @@ h1{
                     top: 0;
                     right: 0;
                     border-radius: 0 0 0 10px;
-                    @media (max-width: 1366px) {
-                        font-size: 10pt;
-                    }
+                    
                 }
             }
             .niculinha{
-                background: url('../resources/imgs/index/team/eu.png');
+                background: url('../resources/imgs/index/team/eu.PNG');
                 background-size: cover;
                 position: relative;
                 .front-end{
@@ -310,41 +306,20 @@ h1{
                     top: 0;
                     right: 0;
                     border-radius: 0 0 0 10px;
-                    @media (max-width: 1366px) {
-                        font-size: 10pt;
-                    }
+                    
                 }
             }
 
         }
     }
 
-    .bout-title{
-        font-size: 4ch;
-        color: $blu;
-        @media (max-width: 1366px) {
-            font-size: 2ch !important;
-        }
-        @media (max-width: $mobile) {
-            font-size: 3ch !important;
-        }
-    }
-    .bout-subtitle{
-        font-size: 3ch;
-        color: $blu;
-        @media (max-width: 1366px) {
-            font-size: 2ch !important;
-            margin: 0 0 10px 0;
-        }
-        @media (max-width: $mobile) {
-            font-size: 3ch !important;
-        }
-    }
+    
 
     .bout-cta{
         animation-duration: 1s;
         background-color: #fff;
         border: none;
+        margin: 20px 0 0 0;
         padding: 2ch;
         border-radius: 2px;
         box-shadow: 2px 2px 4px #00000030;
@@ -353,19 +328,10 @@ h1{
         transition-duration: 300ms;
         text-decoration: none;
         color: $blu;
-        font-size: 1.3ch;
+        font-size: 14px;
         font-weight: bolder;
         font-family: 'Montserrat', sans-serif;
-        @media (max-width: 1366px) {
-            font-size: 10pt;
-            padding: 1ch;
-            margin: 1ch 0 0 0;
-        }
-        @media (max-width: $mobile) {
-            font-size: 1.3ch;
-            padding: 2ch;
-            margin: 2ch 0 0 0;
-        }
+        
         &:hover{
             border: 2px solid $blu;
             background-color: $blu;
@@ -379,4 +345,10 @@ h1{
 .use{
     width: 100vw;
     height: 100vh;
+}
+
+.bout-title-register{
+    color: $blu;
+    font-size: 24px;
+    margin: 4em 0 0 0;
 }

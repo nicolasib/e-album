@@ -22,6 +22,12 @@ h1, h2, h3, h4{
     margin: 0;
 }
 
+@media (min-width: $mobile){
+    .confirm-modal{
+        margin: 10% 0 0 0 !important;
+    }
+}
+
 .wrapper{
     display: flex;
 }
@@ -35,43 +41,13 @@ h1, h2, h3, h4{
     background-image: linear-gradient(-45deg,$blu, $pur);
     background-position: center;
     
-    @media (max-width: $mediumsize){
-        width: 40vw;
-        .profile-welcome{
-            font-size: 14pt !important;
-        }
-        .profile-img{
-            width: 150px !important;
-            height: 150px !important;
-            overflow: hidden;
-            position: relative;
-            img{
-                position: absolute;
-            }
-        }
-        .options-title{
-            color: #fff;
-            position: relative;
-            &::after{
-                content: '';
-                position: absolute;
-                top: 50%;
-                transform: translate(0, -50%);
-                margin: 0 0 0 10px; 
-                height: 2px;
-                display: inline-block;
-                box-sizing: border-box;
-                width: 65% !important;
-                border-radius: 5px;
-                background-color: #fff;
-            }
-        }
-    }
+    
 
     .album-logo{
         flex: 0;
         color: #fff;
         flex-basis: 0;
+        font-size: 24px;
         margin: 0 0 2em 0;
     }
     .profile-data{
@@ -92,7 +68,7 @@ h1, h2, h3, h4{
         }
         .profile-welcome{
             color: #fff;
-            margin: 10px 0 0 0;
+            margin: 10px 0;
             font-size: 16pt;
         }
     }
@@ -184,15 +160,13 @@ h1, h2, h3, h4{
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
-    padding: 5em;
-    @media (max-width: $mobile) {
-        height: auto;
-    }
-    @media (max-width: 940px){
-        padding: 100px 1em 0 1em;
-    }
+    padding: 6em 20px;
     .album{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .album-title{
             color: $blu;
             margin: 0 0 1em 0;
@@ -200,16 +174,9 @@ h1, h2, h3, h4{
         .stickers-wrapper{
             display: flex;
             flex-flow: wrap;
-            @media (max-width: $mediumsize){
-                justify-content: center;
-            }
+            justify-content: center;            
             .sticker{
-                @media (max-width: $mediumsize){
-                    margin: 0 1em 1em 0;
-                    width: 150px !important;
-                    height: 150px !important;
-                    border: 2px solid $blu;
-                }
+                
                 margin: 0 1em 1em 0;
                 width: 150px;
                 height: 150px;
@@ -254,6 +221,7 @@ h1, h2, h3, h4{
     width: 100vw;
     height: 100vh;
     display: flex;
+    padding: 0 20px;
     justify-content: center;
     align-items: flex-start;
     position: absolute;
@@ -262,10 +230,8 @@ h1, h2, h3, h4{
     background-color: #0008;
 }
 .confirm-modal{
-    margin: 10% 0 0 0;
-    @media (max-width: 940px) {
-        margin: 25% 10% 0 10%;
-    }
+    margin: 40% 0 0 0;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     padding: 2ch;
@@ -335,16 +301,24 @@ h1, h2, h3, h4{
             background-color: #0000;
             border: none;
             color: #fff;
-            font-size: 2ch;
+            font-size: 24px;
             align-self: flex-end;
             font-weight: bold;
         }
         .profile-data{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             .profile-img{
                 width: 200px;
                 height: 200px;
                 border: 2px solid #fff;
                 overflow: hidden;
+                position: relative;
+                img{
+                    position: absolute;
+                }
             }
             .profile-welcome{
                 color: #fff;
@@ -452,7 +426,7 @@ h1, h2, h3, h4{
         background-color: #0000;
         color: #fff;
         font-weight: bold;
-        font-size: 2ch;
+        font-size: 24px;
         border: none;
     }
     
