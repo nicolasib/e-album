@@ -47,10 +47,10 @@ $(document).ready(function () {
 
 
 
-    var singer = 1;
+    var team = 1;
     $.ajax({
         url: './php/controllers/cr_album.php', // Url do lado server que vai receber o arquivo
-        data: {singer: singer},
+        data: {team: team},
         type: 'POST',
         success: function (info) {
             if(info) {
@@ -61,9 +61,9 @@ $(document).ready(function () {
                     var img_path = "../resources/imgs/cardsM/1/" + (i+1) + ".jpeg";
                     $(identifier).html("<img src='" + img_path + "'>");
                     if (Number(estados[i]) == 1)
-                        $(identifier).addClass("music-enabled");
+                        $(identifier).addClass("player-enabled");
                     else 
-                        $(identifier).addClass("music-disabled");
+                        $(identifier).addClass("player-disabled");
                 }
             }
             else {
@@ -88,7 +88,7 @@ $(document).ready(function () {
         //Aqui vai ter criação do modal e setar o evento onClick do botão salvar
         //do modal, para chamar a função do ajax
         $('.modal-wrapper').removeClass('hidden');
-        if(classe.match(/music-disabled/)){
+        if(classe.match(/player-disabled/)){
             $('.modal-title').html('Tem certeza que deseja colar?');
         }else{
             $('.modal-title').html('Tem certeza que deseja descolar?');
@@ -98,7 +98,7 @@ $(document).ready(function () {
 
     $('.modal-submit').click(function(e){
         e.preventDefault();
-        if($("#" + idFigura).attr('class').match(/music-disabled/)){
+        if($("#" + idFigura).attr('class').match(/player-disabled/)){
             saveCard(idFigura);
             destroyModal(e);
         } //Cola Card
@@ -119,8 +119,8 @@ $(document).ready(function () {
             type: 'POST',
             success: function (info) {
                 if(info) {
-                    $("#" + idFigura).removeClass("music-disabled");
-                    $("#" + idFigura).addClass("music-enabled");
+                    $("#" + idFigura).removeClass("player-disabled");
+                    $("#" + idFigura).addClass("player-enabled");
                 }
                 else {
                     alert("Erro ao acessar banco de figurinhas!");
@@ -139,8 +139,8 @@ $(document).ready(function () {
             type: 'POST',
             success: function (info) {
                 if(info) {
-                    $("#" + idFigura).removeClass("music-enabled")
-                    $("#" + idFigura).addClass("music-disabled")
+                    $("#" + idFigura).removeClass("player-enabled")
+                    $("#" + idFigura).addClass("player-disabled")
                 }
                 else {
                     alert("Erro ao acessar banco de figurinhas!");
