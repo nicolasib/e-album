@@ -80,9 +80,6 @@ h1 {
   padding: 2em 6em;
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
-  max-width: -webkit-min-content;
-  max-width: -moz-min-content;
-  max-width: min-content;
 }
 
 @media (max-width: 414px) {
@@ -102,8 +99,6 @@ h1 {
 }
 
 .wrapper .content .form-holder form .image-holder {
-  overflow: hidden;
-  position: relative;
   width: 200px;
   height: 200px;
   margin: 0 0 2em 0;
@@ -114,10 +109,6 @@ h1 {
   border: 2px solid #426cf5;
 }
 
-.wrapper .content .form-holder form .image-holder img {
-  position: absolute;
-}
-
 @media (max-width: 414px) {
   .wrapper .content .form-holder form .image-holder {
     width: 180px;
@@ -126,12 +117,10 @@ h1 {
 }
 
 .wrapper .content .form-holder form .image-holder .degrade {
-  z-index: 99;
-  pointer-events: none;
   width: 100%;
   height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#0000), to(#000000ee));
-  background-image: linear-gradient(#0000, #000000ee);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0000), to(#00000092));
+  background-image: linear-gradient(#0000, #00000092);
   position: absolute;
 }
 
@@ -143,7 +132,6 @@ h1 {
   position: absolute;
   bottom: 0px;
   color: #fff;
-  z-index: 1000;
   left: 50%;
   text-align: center;
   cursor: pointer;
@@ -153,6 +141,11 @@ h1 {
 
 .wrapper .content .form-holder form .image-holder label:hover {
   text-decoration: underline;
+}
+
+.wrapper .content .form-holder form .image-holder img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .wrapper .content .form-holder form .input-texts {
@@ -230,104 +223,5 @@ h1 {
 .wrapper .content .form-holder form .input-texts .btn-delete:hover {
   background-color: red;
   color: #fff;
-}
-
-.register-erro {
-  color: red;
-  text-align: center;
-  margin: 1ch 0;
-}
-
-.hidden {
-  display: none !important;
-}
-
-.modal-wrapper {
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
-  -webkit-transition-duration: 100ms;
-          transition-duration: 100ms;
-  z-index: 99;
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  position: absolute;
-  left: 0;
-  background-color: #0008;
-}
-
-.confirm-modal {
-  margin: 10% 0 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2ch;
-  background-color: #fff;
-  z-index: 199;
-}
-
-@media (max-width: 940px) {
-  .confirm-modal {
-    margin: 25% 10% 0 10%;
-  }
-}
-
-.confirm-modal .delete-profile {
-  background-color: #fff;
-  border: 2px solid #426cf5;
-  border-radius: 4px;
-  padding: 1ch;
-  font-weight: bold;
-  color: #426cf5;
-  margin: 2ch 0;
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
-  cursor: pointer;
-}
-
-.confirm-modal .delete-profile:hover {
-  background-color: #426cf5;
-  color: #fff;
-}
-
-.confirm-modal .delete-cancel {
-  background-color: #fff;
-  border: 2px solid red;
-  border-radius: 4px;
-  padding: 1ch;
-  font-weight: bold;
-  color: red;
-  -webkit-transition: ease-in-out;
-  transition: ease-in-out;
-  -webkit-transition-duration: 150ms;
-          transition-duration: 150ms;
-  cursor: pointer;
-}
-
-.confirm-modal .delete-cancel:hover {
-  background-color: red;
-  color: #fff;
-}
-
-.modal-background {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 /*# sourceMappingURL=profile.css.map */

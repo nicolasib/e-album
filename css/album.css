@@ -4,7 +4,6 @@
   font-family: 'Montserrat', sans-serif;
   -webkit-box-sizing: border-box !important;
           box-sizing: border-box !important;
-  text-decoration: none;
 }
 
 body {
@@ -49,11 +48,10 @@ h1, h2, h3, h4 {
   .side-menu .profile-img {
     width: 150px !important;
     height: 150px !important;
-    overflow: hidden;
-    position: relative;
   }
   .side-menu .profile-img img {
-    position: absolute;
+    max-width: 100% !important;
+    max-height: 100% !important;
   }
   .side-menu .options-title {
     color: #fff;
@@ -108,13 +106,12 @@ h1, h2, h3, h4 {
 .side-menu .profile-data .profile-img {
   width: 200px;
   height: 200px;
-  overflow: hidden;
   border: 2px solid #fff;
-  position: relative;
 }
 
 .side-menu .profile-data .profile-img img {
-  position: absolute;
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
 
 .side-menu .profile-data .profile-welcome {
@@ -471,7 +468,11 @@ h1, h2, h3, h4 {
   width: 200px;
   height: 200px;
   border: 2px solid #fff;
-  overflow: hidden;
+}
+
+.collapsed-wrapper .collapsed-options .profile-data .profile-img img {
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
 
 .collapsed-wrapper .collapsed-options .profile-data .profile-welcome {

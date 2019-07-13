@@ -10,7 +10,6 @@ $mobile: 528px;
 *{
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box !important;
-    text-decoration: none;
 }
 
 body{
@@ -43,10 +42,9 @@ h1, h2, h3, h4{
         .profile-img{
             width: 150px !important;
             height: 150px !important;
-            overflow: hidden;
-            position: relative;
             img{
-                position: absolute;
+                max-width: 100% !important;
+                max-height: 100% !important;
             }
         }
         .options-title{
@@ -83,11 +81,10 @@ h1, h2, h3, h4{
         .profile-img{
             width: 200px;
             height: 200px;
-            overflow: hidden;
             border: 2px solid #fff;
-            position: relative;
             img{
-                position: absolute;
+                max-width: 100% !important;
+                max-height: 100% !important;
             }
         }
         .profile-welcome{
@@ -344,7 +341,10 @@ h1, h2, h3, h4{
                 width: 200px;
                 height: 200px;
                 border: 2px solid #fff;
-                overflow: hidden;
+                img{
+                    max-width: 100% !important;
+                    max-height: 100% !important;
+                }
             }
             .profile-welcome{
                 color: #fff;

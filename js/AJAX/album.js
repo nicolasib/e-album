@@ -2,20 +2,6 @@ $(document).ready(function () {
 
     $('.collapsed-wrapper').css("top", "-="+screen.height);
 
-    var profileImage = new Image();
-
-    profileImage.src = $('.profile-img > img').attr('src');
-
-    if(profileImage.naturalHeight < profileImage.naturalWidth){
-        $('.profile-img > img').css("max-height", "100%");
-        $('.profile-img > img').css("left", "50%");
-        $('.profile-img > img').css("transform", "translate(-50%, 0)");
-    }else{
-        $('.profile-img > img').css("max-width", "100%");
-        $('.profile-img > img').css("top", "50%");
-        $('.profile-img > img').css("transform", "translate(0, -50%)");
-    }
-
 
     if(screen.width <= 940){
         $('.side-menu').addClass('hidden');
@@ -80,7 +66,6 @@ $(document).ready(function () {
     $(".sticker").click(function (e) { //Clique no espaço da figura
         e.preventDefault();
         e.stopPropagation();
-        $('.modal-wrapper').css("top", window.scrollY);
         modal($(this).attr('id'), $(this).attr('class'));
     })
 

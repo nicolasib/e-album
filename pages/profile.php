@@ -15,14 +15,6 @@
     <link rel="stylesheet" href="../css/profile.css">
 </head>
 <body>
-    <section class="modal-wrapper hidden">
-        <div class="confirm-modal">
-            <h1 class="modal-title">Tem certeza que deseja excluir sua conta?</h1>
-            <button class="delete-profile">Sim</button>
-            <button class="delete-cancel">Não</button>
-        </div>
-        <div class="modal-background"></div>
-    </section>
     <main class="wrapper">
         <div class="content">
             <h1 class="content-title animated fadeInDown">
@@ -46,10 +38,10 @@
                         <input class="input" type="password" name="pass" value="<?php echo $pass;?>">
                         <button class="btn-update" id="1" type="submit">Atualizar</button>
                         <button class="btn-delete" id="0" type="submit">Deletar</button>
-                        <div class="register-erro"></div>
                         <a href="album.php">Voltar</a>
                     </div>
                 </form>
+                <div class="register-erro"></div>
             </div>
         </div>
     </main>
