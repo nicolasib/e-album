@@ -1,6 +1,65 @@
 $(document).ready(function () {
 
+    $(".btn-delete").click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        modal();
+    })
+
+    function modal() {
+        $('.modal-wrapper').css("top", window.scrollY);
+        $('.modal-wrapper').removeClass('hidden');
+    }
+
+    function destroyModal(e){
+        e.preventDefault();
+        e.stopPropagation();
+        $('.modal-wrapper').addClass('hidden');
+    }
+
+    $('.modal-background').click(function (e) { 
+        e.preventDefault();
+        destroyModal(e);
+    })
+
+    $('.delete-profile').click(function(e){
+        e.preventDefault();
+        $.ajax({
+            url: './php/controllers/cr_delete.php', // Url do lado server que vai receber o arquivo
+            data: {},
+            type: 'POST',
+            success: function (info) {
+                if(info == 'Não foi possível deletar!'){
+                    $('.register-erro').html(info);
+                }else{
+                    window.location.assign("./php/controllers/cr_logout.php");
+                }
+            },
+            error: function (exr, sender) {
+                alert('Erro ao carregar pagina');
+            }
+        });
+    });
+
+    $('.delete-cancel').click(function (e) { 
+        destroyModal(e);
+    });    
+
     var file = "";
+
+    var profileImage = new Image();
+
+    profileImage.src = $('.image-holder > img').attr('src');
+
+    if(profileImage.naturalHeight < profileImage.naturalWidth){
+        $('.image-holder > img').css("max-height", "100%");
+        $('.image-holder > img').css("left", "50%");
+        $('.image-holder > img').css("transform", "translate(-50%, 0)");
+    }else{
+        $('.image-holder > img').css("max-width", "100%");
+        $('.image-holder > img').css("top", "50%");
+        $('.image-holder > img').css("transform", "translate(0, -50%)");
+    }
 
     //PREVIEW
     $("#user-image").on("change", function () {
@@ -26,25 +85,9 @@ $(document).ready(function () {
     var form_Data;
     $(".form-update").submit(function(e) {
         e.preventDefault();
-        //DELETE
-        if (clicked == "0") {
-            $.ajax({
-                url: './php/controllers/cr_delete.php', // Url do lado server que vai receber o arquivo
-                data: {},
-                type: 'POST',
-                success: function (info) {
-                    if(info == 'Não foi possível deletar!'){
-                        $('.register-erro').html(info);
-                    }else{
-                        window.location.assign("./php/controllers/cr_logout.php");
-                    }
-                },
-                error: function (exr, sender) {
-                    alert('Erro ao carregar pagina');
-                }
-            });
+        
+            
         //UPDATE
-        } else {
             var form_Data = new FormData();
             var formfiles = document.querySelector('#user-image');
             form_Data.append("name", $("input[name=name]").val());
@@ -70,6 +113,5 @@ $(document).ready(function () {
                     alert('Erro ao carregar pagina');
                 }
             });
-        }
     });
 });
