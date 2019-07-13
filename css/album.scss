@@ -218,7 +218,7 @@ h1, h2, h3, h4{
         }
     }
 }
-.player-disabled {
+.music-disabled {
     transition: ease-in-out;
     transition-duration: 600ms;
     img{
@@ -229,7 +229,7 @@ h1, h2, h3, h4{
     }
     overflow: hidden;
 }
-.player-enabled {
+.music-enabled {
     transition: ease-in-out;
     transition-duration: 600ms;
     img{

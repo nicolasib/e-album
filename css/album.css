@@ -286,7 +286,7 @@ h1, h2, h3, h4 {
   }
 }
 
-.player-disabled {
+.music-disabled {
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: 600ms;
@@ -294,7 +294,7 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-.player-disabled img {
+.music-disabled img {
   height: 100%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -303,7 +303,7 @@ h1, h2, h3, h4 {
   /* IE */
 }
 
-.player-enabled {
+.music-enabled {
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: 600ms;
@@ -311,7 +311,7 @@ h1, h2, h3, h4 {
   overflow: hidden;
 }
 
-.player-enabled img {
+.music-enabled img {
   height: 100%;
 }
 
