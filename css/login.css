@@ -50,7 +50,7 @@ h1 {
   padding: 1ch;
   color: grey;
   border: 1px solid lightgrey;
-  font-size: 1.2ch;
+  font-size: 14px;
   -webkit-transition: ease-in-out;
   transition: ease-in-out;
   -webkit-transition-duration: 150ms;
